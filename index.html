@@ -1,100 +1,893 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Progate</title>
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
-  <link rel="stylesheet" type="text/css" href="responsive.css">
-  <link rel="shortcut icon" href="favicon.ico" >
-  <!--     ┬ ┬┌─┐  ┌─┐┬─┐┌─┐        -->
-  <!--     │││├┤   ├─┤├┬┘├┤         -->
-  <!--     └┴┘└─┘  ┴ ┴┴└─└─┘        -->
-  <!--     ╔═╗╦═╗╔═╗╔═╗╔═╗╔╦╗╔═╗    -->
-  <!--     ╠═╝╠╦╝║ ║║ ╦╠═╣ ║ ║╣     -->
-  <!--     ╩  ╩╚═╚═╝╚═╝╩ ╩ ╩ ╚═╝    -->
-</head>
-<body>
-    <header>
-      <div class="container">
-        <div class="header-left">
-          <img class="logo" src="https://prog-8.com/images/html/advanced/main_logo.png">
-        </div>
-        <span class="fa fa-bars menu-icon"></span>
-        <div class="header-right">
-          <a href="#">Lessons</a>
-          <a href="#">Sign in</a>
-          <a href="#" class="login">Log in</a>
-        </div>
-      </div>
-    </header>
-    <div class="top-wrapper">
-      <div class="container">
-        <h1>LEARN TO CODE.</h1>
-        <h1>LEARN TO BE CREATIVE.</h1>
-        <p>Progate is a web service where you can learn programming online.</p>
-        <p>We offer you a fully equipped coding environment to get you started.</p>
-        <div class="btn-wrapper">
-          <a href="#" class="btn signup">Sign up with Email</a>
-          <p>or</p>
-          <a href="#" class="btn facebook"><span class="fa fa-facebook"></span>Sign up with Facebook</a>
-          <a href="#" class="btn twitter"><span class="fa fa-twitter"></span>Sign up with Twitter</a>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <title>BILAL KHAN | Application Security Engineer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="BreezyCV - Resume / CV / vCard Template" />
+    <meta name="keywords" content="vcard, resposnive, retina, resume, jquery, css3, bootstrap, Material CV, portfolio" />
+    <meta name="author" content="lmpixels" />
+    <link rel="shortcut icon" href="favicon.ico">
+
+
+    <link rel="stylesheet" href="css/reset.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css" type="text/css">
+    <link rel="stylesheet" href="css/animations.css" type="text/css">
+    <link rel="stylesheet" href="css/perfect-scrollbar.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+  </head>
+
+  <body>
+    <!-- Animated Background -->
+    <div class="lm-animated-bg" style="background-image: url(img/main_bg.png);"></div>
+    <!-- /Animated Background -->
+
+    <!-- Loading animation -->
+    <div class="preloader">
+      <div class="preloader-animation">
+        <div class="preloader-spinner">
         </div>
       </div>
     </div>
-    <div class="lesson-wrapper">
-      <div class="container">
-        <div class="heading">
-          <h2>Learn Where to Get Started!</h2>
-        </div>
-        <div class="lessons">
-          <div class="lesson">
-            <div class="lesson-icon">
-              <img src="https://prog-8.com/images/html/advanced/html.png">
-              <p>HTML & CSS</p>
+    <!-- /Loading animation -->
+
+    <div class="page">
+      <div class="page-content">
+
+          <header id="site_header" class="header mobile-menu-hide">
+            <div class="header-content">
+              <div class="header-photo">
+                <img src="img/main_photo.jpg" alt="Alex Smith">
+              </div>
+              <div class="header-titles">
+                <h2>BILAL KHAN</h2>
+                <h4>Application Security Engineer</h4>
+              </div>
             </div>
-            <p class="text-contents">Languages used to build and design the appearances of your websites. HTML adds the structure, and CSS styles it.</p>
-          </div>
-          <div class="lesson">
-            <div class="lesson-icon">
-              <img src="https://prog-8.com/images/html/advanced/jQuery.png">
-              <p>jQuery</p>
+
+            <ul class="main-menu">
+              <li class="active">
+                <a href="#home" class="nav-anim">
+                  <span class="menu-icon lnr lnr-home"></span>
+                  <span class="link-text">Home</span>
+                </a>
+              </li>
+              <li>
+                <a href="#about-me" class="nav-anim">
+                  <span class="menu-icon lnr lnr-user"></span>
+                  <span class="link-text">About Me</span>
+                </a>
+              </li>
+              <li>
+                <a href="#resume" class="nav-anim">
+                  <span class="menu-icon lnr lnr-graduation-hat"></span>
+                  <span class="link-text">Resume</span>
+                </a>
+              </li>
+              <!--<li>
+                <a href="#portfolio" class="nav-anim">
+                  <span class="menu-icon lnr lnr-briefcase"></span>
+                  <span class="link-text">Portfolio</span>
+                </a>
+              </li>-->
+              <li>
+                <a href="#blog" class="nav-anim">
+                  <span class="menu-icon lnr lnr-book"></span>
+                  <span class="link-text">Blog</span>
+                </a>
+              </li>
+              <li>
+                <a href="#contact" class="nav-anim">
+                  <span class="menu-icon lnr lnr-envelope"></span>
+                  <span class="link-text">Contact</span>
+                </a>
+              </li>
+            </ul>
+
+            <div class="social-links">
+              <ul>
+                <li><a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+              </ul>
             </div>
-            <p class="text-contents">A fast, feature-rich and easy-to-use JavaScript library that handles animations and Ajax requests.</p>
-          </div>
-          <div class="lesson">
-            <div class="lesson-icon">
-              <img src="https://prog-8.com/images/html/advanced/ruby.png">
-              <p>Ruby</p>
+
+            <div class="header-buttons">
+              <a href="#" target="_blank" class="btn btn-primary">Download CV</a>
             </div>
-            <p class="text-contents">A dynamic, general-purpose language that is simple and productive. It is commonly used around the world to build web applications.</p>
+
+            <div class="copyrights">© 2023 All rights reserved.</div>
+          </header>
+
+          <!-- Mobile Navigation -->
+          <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
           </div>
-          <div class="lesson">
-            <div class="lesson-icon">
-              <img src="https://prog-8.com/images/html/advanced/php.png">
-              <p>PHP</p>
+          <!-- End Mobile Navigation -->
+
+          <!-- Arrows Nav -->
+          <div class="lmpixels-arrows-nav">
+            <div class="lmpixels-arrow-right"><i class="lnr lnr-chevron-right"></i></div>
+            <div class="lmpixels-arrow-left"><i class="lnr lnr-chevron-left"></i></div>
+          </div>
+          <!-- End Arrows Nav -->
+
+          <div class="content-area">
+            <div class="animated-sections">
+              <!-- Home Subpage -->
+              <section data-id="home" class="animated-section start-page">
+                <div class="section-content vcentered">
+
+                    <div class="row">
+                      <div class="col-sm-12 col-md-12 col-lg-12">
+                        <div class="title-block">
+                          <h2>BILAL KHAN</h2>
+                          <div class="owl-carousel text-rotation">                                    
+                            <div class="item">
+                              <div class="sp-subtitle">Application Security Engineer</div>
+                            </div>
+                            
+                            <!--<div class="item">
+                              <div class="sp-subtitle">.</div>
+                            </div>-->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                </div>
+              </section>
+              <!-- End of Home Subpage -->
+
+              <!-- About Me Subpage -->
+              <section data-id="about-me" class="animated-section">
+                <div class="section-content">
+                  <div class="page-title">
+                    <h2>About <span>Me</span></h2>
+                  </div>
+
+                  <!-- Personal Information -->
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-7">
+                      <p>Over 12 years of experience in Cyber Security Domain with in-depth knowledge of Web and Mobile applications, thick client, API, Vulnerability Assessment and Penetration Testing, DevSecOps and Cloud Security. Experienced includes working with Product based organization as well as Consulting firm.</p>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-5">
+                      <div class="info-list">
+                        <ul>
+                          <li>
+                            <span class="title">Age</span>
+                            <span class="value">35</span>
+                          </li>
+
+                          <li>
+                            <span class="title">Residence</span>
+                            <span class="value">INDIA</span>
+                          </li>
+
+                          <li>
+                            <span class="title">Address</span>
+                            <span class="value">Mumbai, Maharashtra</span>
+                          </li>
+
+                          <li>
+                            <span class="title">e-mail</span>
+                            <span class="value">khan.bilal88@gmail.com</span>
+                          </li>
+
+                          <li>
+                            <span class="title">Phone</span>
+                            <span class="value">+91 9920 931 641</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End of Personal Information -->
+
+                  <div class="white-space-50"></div>
+
+                  <!-- Services -->
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-12">
+                      <div class="block-title">
+                        <h3>Who <span>Am I</span></h3>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-12">
+					<p>As an Application Security Engineer, I am dedicated to fortifying digital landscapes and ensuring the resilience of software applications. With a strong foundation in cybersecurity and a keen eye for identifying vulnerabilities, I specialize in crafting robust security measures to safeguard critical data and systems.</p>
+					<p>My expertise extends to conducting comprehensive security assessments, penetration testing, and code reviews to pinpoint and remediate vulnerabilities early in the development lifecycle. I am well-versed in industry best practices and frameworks, ensuring that applications meet stringent security standards.</p>
+					<p>Collaboration is at the core of my approach, working closely with cross-functional teams to integrate security seamlessly into the software development process. I am passionate about staying updated with emerging threats and technologies, enabling me to provide proactive solutions that protect against the ever-evolving threat landscape.</p>
+					</div>
+					
+                  </div>
+                  <!-- End of Services -->
+
+                  <div class="white-space-30"></div>          
+
+                 <!-- <div class="white-space-50"></div> -->
+                  
+                </div>
+              </section>
+              <!-- End of About Me Subpage -->
+
+              <!-- Resume Subpage -->
+              <section data-id="resume" class="animated-section">
+                <div class="section-content">  
+                  <div class="page-title">
+                    <h2>Resume</h2>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-7">
+
+                      <div class="block-title">
+                        <h3>Education</h3>
+                      </div>
+                      
+                      <div class="timeline timeline-second-style clearfix">
+                        <div class="timeline-item clearfix">
+                          <div class="left-part">
+                            <h5 class="item-period">2010</h5>
+                            <!--<span class="item-company">University of Mumbai</span>-->
+                          </div>
+                          <div class="divider"></div>
+                          <div class="right-part">
+                            <h4 class="item-title">Bachelor of Science (Information Technology)</h4>
+							<span class="item-company">University of Mumbai</span>
+                            <!--<p></p>-->
+                          </div>
+                        </div>
+
+                        <div class="timeline-item clearfix">
+                          <div class="left-part">
+                            <h5 class="item-period">2006</h5>
+                            <!--<span class="item-company">Maharashtra Board</span>-->
+                          </div>
+                          <div class="divider"></div>
+                          <div class="right-part">
+                            <h4 class="item-title">Higher Secondary Certificate (H.S.C)</h4>
+                            <span class="item-company">Maharashtra Board</span>
+                            <!--<p></p>-->
+                          </div>
+                        </div>
+						
+						<div class="timeline-item clearfix">
+                          <div class="left-part">
+                            <h5 class="item-period">2004</h5>
+                            <!--<span class="item-company">Maharashtra Board</span>-->
+                          </div>
+                          <div class="divider"></div>
+                          <div class="right-part">
+                            <h4 class="item-title">Secondary School Certificate (S.S.C)</h4>
+                            <span class="item-company">Maharashtra Board</span>
+                            <!--<p></p>-->
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="white-space-50"></div>
+
+                      <div class="block-title">
+                        <h3>Work Experience</h3>
+                      </div>
+
+                      <div class="timeline timeline-second-style clearfix">
+                        <div class="timeline-item clearfix">
+                          <div class="left-part">
+                            <h5 class="item-period">Oct 2022 - Current</h5>
+                            <span class="item-company">ConnectWise LLP</span>
+                          </div>
+                          <div class="divider"></div>
+                          <div class="right-part">
+                            <h4 class="item-title">Principal Product Security Engineer</h4>
+                            <p>
+								<li>Performed Internal Penetration testing and Threat Hunting to identify vulnerabilities in applications</li>
+								<li>Reporting and conducting vulnerability triage with development teams on timely basis</li>
+								<li>Shift-left initiative by creating Security Championship program and ensuring that development teams are building applications in secure manner, right from initial phase of designing</li>
+								<li>Worked with DevOps team to integrate security tools in Pipeline to detect vulnerabilities in source code</li>
+								<li>Updated technical documentation, product specifications and technical training materials</li>
+								<li>Integrated Snyk tool in GitLab Pipeline to perform SCA, SAST, SCA and IaC Scans to identify vulnerabilities and notify to development team about Pipeline build</li>
+							</p>
+                          </div>
+                        </div>
+
+                        <div class="timeline-item clearfix">
+                          <div class="left-part">
+                            <h5 class="item-period">July 2021 - Oct 2022</h5>
+                            <span class="item-company">Accenture</span>
+                          </div>
+                          <div class="divider"></div>
+                          <div class="right-part">
+                            <h4 class="item-title">Technology Security Associate Manager</h4>
+                            <p>
+								<li>Led projects and analyzed data to identify opportunities for improvement</li>
+								<li>Led one of the largest security assessment project where around more than 100+ applications were in scope for SAST, DAST, SCA and Penetration testing including DevSecOps</li>
+								<li>Managed a team of 4 members, active participants in quality result driven and reviewing the assessment outcome</li>
+								<li>Closely worked with development / Infrastructure team for remediation plan to fix the identified vulnerabilities in timely manner</li>
+								<li>Created a labs for vulnerable machines to host a Capture The Flag (CTF) event within the organization</li>
+								<li>Trained team to execute security testing projects</li>
+							</p>
+                          </div>
+                        </div>
+                        
+                        <div class="timeline-item clearfix">
+                          <div class="left-part">
+                            <h5 class="item-period">Jan 2020 - July 2021</h5>
+                            <span class="item-company">KPMG</span>
+                          </div>
+                          <div class="divider"></div>
+                          <div class="right-part">
+                            <h4 class="item-title">Manager</h4>
+                            <p>
+								<li>Delivered various projects and worked with clients across multiple geographies including Middle East, Canada and United States and has experience serving across a different domain such as Banking, Telecom, Retail and Pharmaceutical</li>
+								<li>Performed Security Testing on 100+ Web and 30+ Mobile (Android) based applications</li>
+								<li>Performed Vulnerability Assessment and Penetration Testing on 600+ IP's</li>
+								<li>Prepared comprehensive client reports detailing the outcome of all testing with appropriate recommendations and discussed with different stakeholders to make them understand</li>
+								<li>Assisted project team in understanding risk & threat level associated with reported vulnerabilities according to business criticality</li>
+								<li>Conducted Secure Configuration & Endpoint review to identify gaps, recommended technical solutions, process, and procedures to check and reinforce security best practices on the network</li>
+								<li>Developed Minimum Security Baseline/ MBSS for Network devices, Windows Servers, Linux Servers, Docker and Container</li>
+								<li>Conducted risk and business development work such as responding to RFP, making proposals and costing sheets</li>
+								<li>Implemented DevSecOps culture in the client environment and helping clients to implement Secure SDLC for application development and deployment</li>
+							</p>
+                          </div>
+                        </div>
+						
+						<div class="timeline-item clearfix">
+                          <div class="left-part">
+                            <h5 class="item-period">June 2019 - Jan 2020</h5>
+                            <span class="item-company">Cornerstone OnDemand</span>
+                          </div>
+                          <div class="divider"></div>
+                          <div class="right-part">
+                            <h4 class="item-title">Application Security Engineer</h4>
+                            <p>
+								<li>Performed Penetration Testing on Web, thick client and Mobile Applications rolled out before the quarterly release</li>
+								<li>Monitor, Maintain and enhance the Vulnerability Management Program for defects and vulnerabilities observed</li>
+								<li>Developed GSL (Governance Specification Language) rules and alerts for Dome9 to monitor the current security posture of the AWS environment</li>
+								<li>Performed project leadership tasks on selected security projects to improve and enhance security posture</li>
+								<li>Integrated an automated DAST Web app and API scanning by using Burp Suite, Selenium, Postman and Jenkins as well as Software Composition Analysis (SCA) tool i.e., Snyk to identify vulnerabilities in the open source or third-party libraries in the CI/CD Pipeline</li>
+								<li>Conducted social engineering attacks for number of clients across sectors that included creating and running a tailored and targeted phishing and vishing campaign for the client organization’s employees to make them submit their sensitive corporate information such as email id, username, password, employee number</li>
+								<li>Validated and verified system security requirements definitions and analyzed system security designs</li>
+							</p>
+                          </div>
+                        </div>
+						
+						<div class="timeline-item clearfix">
+                          <div class="left-part">
+                            <h5 class="item-period">Jan 2011 - May 2019</h5>
+                            <span class="item-company">Continuum Managed Solutions Pvt. Ltd</span>
+                          </div>
+                          <div class="divider"></div>
+                          <div class="right-part">
+                            <h4 class="item-title">Principal Quality Engineer</h4>
+                            <p>
+								<li>Active involvement with various Development teams starting from design phase to product development</li>
+								<li>Managed a team of 5 members and tracked the progress of testing and release cycle</li>
+								<li>Involved in System testing and acceptance testing and analyzing business and end user requirements, preparation of test strategy and test plan, verifying and approving the test environment</li>
+								<li>Created Analysis reports on JIRA and Confluence, and manage the test cases and results in TestRail</li>
+								<li>Assessed software bugs and compiled findings along with suggested resolutions for development team members</li>
+								<li>Gathered data on integration issues and vulnerabilities and outlined improvement recommendations</li>
+								<li>Created accurate and successful test scripts to manage automated testing of certain products and features</li>
+								<li>Wrote and optimized test cases to maximize success of manual software testing with consistent, thorough approaches</li>
+								<li>Closely worked with the developers to identified the cause of error and to find the possible solution for same</li>
+								<li>Worked with InfoSec team, to perform common vulnerability assessment for web application like broken authentication / authorization, XSS, SQL Injection etc</li>
+							</p>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <!-- Skills & Certificates -->
+                    <div class="col-xs-12 col-sm-5">
+					
+					<!-- Knowledges -->
+                      <div class="block-title">
+                        <h3> <span>Skills</span></h3>
+                      </div>
+
+                      <ul class="knowledges">
+                        <li>Application Security Testing</li>
+                        <li>Vulnerability Assessment & Penetration Testing</li>
+                        <li>Static Application Security Testing (SAST)</li>
+                        <li>Dynamic Application Security Testing (DAST)</li>
+                        <li>Software Composition Analysis (SCA)</li>
+                        <li>DevSecOps</li>
+                        <li>Vulnerability Management</li>
+                        <li>GitLab / GitHub</li>
+                        <li>Cloud Security</li>
+						<li>Burp Suite Pro</li>
+						<li>NMAP</li>
+						<li>Nessus</li>
+						<li>SQLMap</li>
+						<li>Agile Methodology</li>
+						<li>Azure DevOps</li>
+						<li>Functional Testing</li>
+						<li>Manual Testing</li>
+						<li>Acunetix / Netsparker (Invicti)</li>
+						<li>Threat Modelling</li>
+						<li>Jenkins</li>
+						<li>Vulnerability Management</li>
+                      </ul>
+                      <!-- End of Knowledges -->
+					  
+					  <div class="white-space-50"></div>
+					  
+					                        <div class="white-space-10"></div>
+					  
+					  
+					  <!-- Achievements -->
+                      <div class="block-title">
+                        <h3> <span>Achievements</span></h3>
+                      </div>
+
+                      <div class="skills-info skills-second-style">
+                        <!-- Achievements 1 -->
+                        <div class="skill clearfix">
+                          <h4>Employee of the Year</h4>
+                          <div class="skill-value">Employee of the Year for best performance in testing and managing the applications</div>
+                        </div>
+                        <div class="skill-container skill-9">
+                          <div class="skill-percentage"></div>
+                        </div>
+                        <!-- End of Achievements 1 -->
+                        
+                        <!-- Achievements 2 -->
+                        <div class="skill clearfix">
+                          <h4>Team Maestro Security Award</h4>
+                          <div class="skill-value">Awarded with Team Maestro for Security incident handling</div>
+                        </div>
+                        <div class="skill-container skill-9">
+                          <div class="skill-percentage"></div>
+                        </div>
+                        <!-- End of Achievements 2 -->
+                        
+                        <!-- Achievements 3 -->
+                        <div class="skill clearfix">
+                          <h4>Spot Award</h4>
+                          <div class="skill-value">Spot award for fixing the clients server critical issue within a 24 hour</div>
+                        </div>
+                        <div class="skill-container skill-9">
+                          <div class="skill-percentage"></div>
+                        </div>
+                        <!-- End of Achievements 3 -->
+                        
+                        <!-- Achievements 4 -->
+                        <div class="skill clearfix">
+                          <h4>Team Award</h4>
+                          <div class="skill-value">Awarded with Team award for best application implementation and integration</div>
+                        </div>
+                        <div class="skill-container skill-9">
+                          <div class="skill-percentage"></div>
+                        </div>
+                        <!-- End of Achievements 4 -->
+						
+						<!-- Achievements 5 -->
+                        <div class="skill clearfix">
+                          <h4>STAR Performer</h4>
+                          <div class="skill-value">Awarded with STAR Performer for the Quarter release</div>
+                        </div>
+                        <div class="skill-container skill-9">
+                          <div class="skill-percentage"></div>
+                        </div>
+                        <!-- End of Achievements 5 -->
+						
+						<!-- Achievements 6 -->
+                        <div class="skill clearfix">
+                          <h4>ENCORE - Rising Star Award</h4>
+                          <div class="skill-value">Awarded with Rising Start award for the Quarter 1 – April 2020 – June2020 in KPMG</div>
+                        </div>
+                        <div class="skill-container skill-9">
+                          <div class="skill-percentage"></div>
+                        </div>
+                        <!-- End of Achievements 6 -->
+
+                      </div>
+                      <!-- End of Achievements -->
+					  
+					  <div class="white-space-10"></div>
+					  
+                      <!-- Languages -->
+                      <div class="block-title">
+                        <h3> <span>Languages</span></h3>
+                      </div>
+
+                      <div class="skills-info skills-second-style">
+                        <!-- Language 1 -->
+                        <div class="skill clearfix">
+                          <h4>English</h4>
+                          <div class="skill-value">Professional Working Proficiency</div>
+                        </div>
+                        <div class="skill-container skill-1">
+                          <div class="skill-percentage"></div>
+                        </div>
+                        <!-- End of Language 1 -->
+                        
+                        <!-- Language 2 -->
+                        <div class="skill clearfix">
+                          <h4>Hindi</h4>
+                          <div class="skill-value">Full Professional Proficiency</div>
+                        </div>
+                        <div class="skill-container skill-2">
+                          <div class="skill-percentage"></div>
+                        </div>
+                        <!-- End of Language 2 -->
+                        
+                        <!-- Language 3 -->
+                        <div class="skill clearfix">
+                          <h4>Urdu</h4>
+                          <div class="skill-value">Full Professional Proficiency</div>
+                        </div>
+                        <div class="skill-container skill-3">
+                          <div class="skill-percentage"></div>
+                        </div>
+                        <!-- End of Language 3 -->
+                        
+                        <!-- Language 4 -->
+                        <div class="skill clearfix">
+                          <h4>Marathi</h4>
+                          <div class="skill-value">Limited Working Proficiency</div>
+                        </div>
+                        <div class="skill-container skill-4">
+                          <div class="skill-percentage"></div>
+                        </div>
+                        <!-- End of Language 4 -->
+
+                      </div>
+                      <!-- End of Languages -->
+
+                      <div class="white-space-10"></div>
+					                        
+                    </div>
+                    <!-- End of Skills & Certificates -->
+                  </div>
+
+                  <div class="white-space-50"></div>
+
+                  <!-- Certificates -->
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-12">
+                      <div class="block-title">
+                        <h3>Certificates</h3>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="row">
+                    <!-- Certificate 1 -->
+                    <div class="col-xs-12 col-sm-6">
+                      <div class="certificate-item clearfix">
+                        <div class="certi-logo">
+                          <img src="img/certs/CARTP.jpg" alt="logo">
+                        </div>
+                        
+                        <div class="certi-content">
+                          <div class="certi-title">
+                            <h4>Certified Az Red Team Professional (CARTP)</h4>
+                          </div>
+                          <!--<div class="certi-id">
+                            <span>Membership ID: XXXX</span>
+                          </div>-->
+                          <div class="certi-date">
+                            <span>August 2018</span>
+                          </div>
+                          <div class="certi-company">
+                            <span></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- End of Certificate 1 -->
+
+                    <!-- Certificate 2 -->
+                    <div class="col-xs-12 col-sm-6">
+                      <div class="certificate-item clearfix">
+                        <div class="certi-logo">
+                          <img src="img/certs/CPSA.png" alt="logo">
+                        </div>
+                        
+                        <div class="certi-content">
+                          <div class="certi-title">
+                            <h4>CREST Practitioner Security Analyst (CPSA)</h4>
+                          </div>
+                          <!--<div class="certi-id">
+                            <span>Membership ID: XXXX</span>
+                          </div>-->
+                          <div class="certi-date">
+                            <span>January 2019</span>
+                          </div>
+                          <div class="certi-company">
+                            <span></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- End of Certificate 2 -->
+					
+					<!-- Certificate 3 -->
+                    <div class="col-xs-12 col-sm-6">
+                      <div class="certificate-item clearfix">
+                        <div class="certi-logo">
+                          <img src="img/certs/ECSA.png" alt="logo">
+                        </div>
+                        
+                        <div class="certi-content">
+                          <div class="certi-title">
+                            <h4>EC-Council Certified Security Analyst (ECSA)</h4>
+                          </div>
+                          <!--<div class="certi-id">
+                            <span>Membership ID: XXXX</span>
+                          </div>-->
+                          <div class="certi-date">
+                            <span>January 2019</span>
+                          </div>
+                          <div class="certi-company">
+                            <span></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- End of Certificate 3 -->
+					
+					<!-- Certificate 4 -->
+                    <div class="col-xs-12 col-sm-6">
+                      <div class="certificate-item clearfix">
+                        <div class="certi-logo">
+                          <img src="img/certs/CEH.png" alt="logo">
+                        </div>
+                        
+                        <div class="certi-content">
+                          <div class="certi-title">
+                            <h4>EC-Council Certified Ethical Hacker (CEH)</h4>
+                          </div>
+                          <!--<div class="certi-id">
+                            <span>Membership ID: XXXX</span>
+                          </div>-->
+                          <div class="certi-date">
+                            <span>July 2016</span>
+                          </div>
+                          <div class="certi-company">
+                            <span></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- End of Certificate 4 -->
+					
+					<!-- Certificate 5 -->
+                    <div class="col-xs-12 col-sm-6">
+                      <div class="certificate-item clearfix">
+                        <div class="certi-logo">
+                          <img src="img/certs/ECC-CTIA.png" alt="logo">
+                        </div>
+                        
+                        <div class="certi-content">
+                          <div class="certi-title">
+                            <h4>EC-Council Certified Threat Intelligence Analyst (CTIA)</h4>
+                          </div>
+                          <!--<div class="certi-id">
+                            <span>Membership ID: XXXX</span>
+                          </div>-->
+                          <div class="certi-date">
+                            <span>December 2018</span>
+                          </div>
+                          <div class="certi-company">
+                            <span></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- End of Certificate 5 -->
+					
+					<!-- Certificate 6 -->
+                    <div class="col-xs-12 col-sm-6">
+                      <div class="certificate-item clearfix">
+                        <div class="certi-logo">
+                          <img src="img/certs/CASENET.png" alt="logo">
+                        </div>
+                        
+                        <div class="certi-content">
+                          <div class="certi-title">
+                            <h4>Certified Application Security Engineer (CASE .NET)</h4>
+                          </div>
+                          <!--<div class="certi-id">
+                            <span>Membership ID: XXXX</span>
+                          </div>-->
+                          <div class="certi-date">
+                            <span>September 2019</span>
+                          </div>
+                          <div class="certi-company">
+                            <span></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- End of Certificate 6 -->
+					
+					<!-- Certificate 7 -->
+                    <div class="col-xs-12 col-sm-6">
+                      <div class="certificate-item clearfix">
+                        <div class="certi-logo">
+                          <img src="img/certs/AZ-900.png" alt="logo">
+                        </div>
+                        
+                        <div class="certi-content">
+                          <div class="certi-title">
+                            <h4>Microsoft Certified: Azure Fundamentals (AZ-900)</h4>
+                          </div>
+                          <!--<div class="certi-id">
+                            <span>Membership ID: XXXX</span>
+                          </div>-->
+                          <div class="certi-date">
+                            <span>January 2021</span>
+                          </div>
+                          <div class="certi-company">
+                            <span></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- End of Certificate 7 -->
+
+                  </div>
+                  <!-- End of Certificates -->
+                </div>
+              </section>
+              <!-- End of Resume Subpage -->
+
+
+              <!-- Blog Subpage -->
+              <section data-id="blog" class="animated-section">
+                <div class="section-content">  
+                  <div class="page-title">
+                    <h2>Blog</h2>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-12">
+                      <div class="blog-masonry two-columns clearfix">
+                        
+                        <H1>COMING SOON !</H1>
+						
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+              </section>
+              <!-- End of Blog Subpage -->
+
+              <!-- Contact Subpage -->
+              <section data-id="contact" class="animated-section">
+                <div class="section-content">  
+                  <div class="page-title">
+                    <h2>Contact</h2>
+                  </div>
+
+                  <div class="row">
+                    <!-- Contact Info -->
+                    <div class="col-xs-12 col-sm-4">
+                      <div class="lm-info-block gray-default">
+                        <i class="lnr lnr-map-marker"></i>
+                        <h4>Mumbai, India</h4>
+                        <span class="lm-info-block-value"></span>
+                        <span class="lm-info-block-text"></span>
+                      </div>
+
+                      <div class="lm-info-block gray-default">
+                        <i class="lnr lnr-phone-handset"></i>
+                        <h4>+91-9920-931-641</h4>
+                        <span class="lm-info-block-value"></span>
+                        <span class="lm-info-block-text"></span>
+                      </div>
+
+                      <div class="lm-info-block gray-default">
+                        <i class="lnr lnr-envelope"></i>
+                        <h4>khan.bilal88@gmail.com</h4>
+                        <span class="lm-info-block-value"></span>
+                        <span class="lm-info-block-text"></span>
+                      </div>
+
+                      <!--<div class="lm-info-block gray-default">
+                        <i class="lnr lnr-checkmark-circle"></i>
+                        <h4>.</h4>
+                        <span class="lm-info-block-value"></span>
+                        <span class="lm-info-block-text"></span>
+                      </div>-->
+
+
+                    </div>
+                    <!-- End of Contact Info -->
+
+                    <!-- Contact Form -->
+                    <div class="col-xs-12 col-sm-8">
+                      <div id="map" class="map"></div>
+                      <div class="block-title">
+                        <h3>How Can I <span>Help You?</span></h3>
+                      </div>
+
+                      <form id="contact_form" class="contact-form" action="contact_form/contact_form.php" method="post">
+
+                        <div class="messages"></div>
+
+                        <div class="controls two-columns">
+                          <div class="fields clearfix">
+                            <div class="left-column">
+                              <div class="form-group form-group-with-icon">
+                                <input id="form_name" type="text" name="name" class="form-control" placeholder="" required="required" data-error="Name is required.">
+                                <label>Full Name</label>
+                                <div class="form-control-border"></div>
+                                <div class="help-block with-errors"></div>
+                              </div>
+
+                              <div class="form-group form-group-with-icon">
+                                <input id="form_email" type="email" name="email" class="form-control" placeholder="" required="required" data-error="Valid email is required.">
+                                <label>Email Address</label>
+                                <div class="form-control-border"></div>
+                                <div class="help-block with-errors"></div>
+                              </div>
+
+                              <div class="form-group form-group-with-icon">
+                                <input id="form_subject" type="text" name="subject" class="form-control" placeholder="" required="required" data-error="Subject is required.">
+                                <label>Subject</label>
+                                <div class="form-control-border"></div>
+                                <div class="help-block with-errors"></div>
+                              </div>
+                            </div>
+                            <div class="right-column">
+                              <div class="form-group form-group-with-icon">
+                                <textarea id="form_message" name="message" class="form-control" placeholder="" rows="7" required="required" data-error="Please, leave me a message."></textarea>
+                                <label>Message</label>
+                                <div class="form-control-border"></div>
+                                <div class="help-block with-errors"></div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="g-recaptcha" data-sitekey="6LdqmCAUAAAAAMMNEZvn6g4W5e0or2sZmAVpxVqI" data-theme="dark"></div>
+      
+                          <input type="submit" class="button btn-send" value="Send message">
+                        </div>
+                      </form>
+                    </div>
+                    <!-- End of Contact Form -->
+                  </div>
+
+                </div>
+              </section>
+              <!-- End of Contact Subpage -->
             </div>
-            <p class="text-contents">An open source scripting language that can be embedded into HTML, and well suited for web development.</p>
           </div>
-          <div class="clear"></div>
-        </div>
+
       </div>
     </div>
-    <div class="message-wrapper">
-      <div class="container">
-        <div class="heading">
-          <h2>Ready to become an awesome programmer?</h2>
-          <h3>Let's learn to code, learn to be creative!</h3>
-        </div>
-        <span class="btn message">Start Learning</span>
-      </div>
-    </div>
-    <footer>
-      <div class="container">
-        <img src="https://prog-8.com/images/html/advanced/footer_logo.png">
-        <p>Learn to code, learn to be creative.</p>
-      </div>
-    </footer>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/modernizr.custom.js"></script>
+    <script src="js/animating.js"></script>
+
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+
+    <script src='js/perfect-scrollbar.min.js'></script>
+    <script src='js/jquery.shuffle.min.js'></script>
+    <script src='js/masonry.pkgd.min.js'></script>
+    <script src='js/owl.carousel.min.js'></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrDf32aQTCVENBhFJbMBKOUTiUAABtC2o"></script>
+    <script src="js/jquery.googlemap.js"></script>
+    <script src="js/validator.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
