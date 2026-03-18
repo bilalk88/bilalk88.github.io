@@ -1,915 +1,1216 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-    <title>BILAL KHAN | Application Security Engineer</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="Bilal Khan Profile" />
-    <meta name="keywords" content="Bilal Khan, Application Securty Engineer" />
-    <meta name="author" content="bilalk" />
-    <link rel="shortcut icon" href="favicon.ico">
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bilal Ahmed Khan | Senior Application Security Engineer</title>
+  <meta name="description" content="Senior Application Security Engineer with 15+ years securing enterprise web, mobile, API & thick-client applications. OWASP · DevSecOps · AI/LLM Security." />
+  <meta name="keywords" content="Application Security, Penetration Testing, DevSecOps, OWASP, LLM Security, Cybersecurity, AppSec Engineer, Bilal Khan" />
+  <meta property="og:title" content="Bilal Ahmed Khan | Senior Application Security Engineer" />
+  <meta property="og:description" content="15+ years securing enterprise applications across BFSI, Telecom, Retail & Government." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <style>
+    /* ─── RESET & BASE ─────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg:      #04080F;
+      --bg2:     #07101C;
+      --sur:     #0C1828;
+      --sur2:    #0F1E2E;
+      --bdr:     #1A2E45;
+      --cyan:    #00D4FF;
+      --cyand:   #0099BB;
+      --gold:    #C9A84C;
+      --red:     #FF3B5C;
+      --green:   #00FF9D;
+      --bright:  #EDF4FF;
+      --mid:     #7A90AA;
+      --muted:   #3A4E62;
+      --ff-disp: 'Bebas Neue', cursive;
+      --ff-mono: 'IBM Plex Mono', monospace;
+      --ff-body: 'Lato', sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--bright);
+      font-family: var(--ff-body);
+      overflow-x: hidden;
+      line-height: 1.65;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--cyand); border-radius: 2px; }
 
+    /* ─── UTILITY ──────────────────────────────────────── */
+    .mono   { font-family: var(--ff-mono); }
+    .disp   { font-family: var(--ff-disp); letter-spacing: 0.03em; }
+    .wrap   { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+    .sec    { padding: clamp(72px,9vw,120px) 24px; }
+    .sec-alt{ background: var(--bg2); }
+    .divider{ height: 1px; background: linear-gradient(90deg,transparent,var(--bdr),transparent); }
 
-    <link rel="stylesheet" href="css/reset.css" type="text/css">
-    <link rel="stylesheet" href="css/bootstrap-grid.min.css" type="text/css">
-    <link rel="stylesheet" href="css/animations.css" type="text/css">
-    <link rel="stylesheet" href="css/perfect-scrollbar.css" type="text/css">
-    <link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
-    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
-    <link rel="stylesheet" href="css/main.css" type="text/css">
-  </head>
+    /* gradient texts */
+    .g-cyan { background: linear-gradient(130deg,#00D4FF,#00FF9D); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+    .g-gold { background: linear-gradient(130deg,#C9A84C,#FFE082); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
 
-  <body>
-    <!-- Animated Background -->
-    <div class="lm-animated-bg" style="background-image: url(img/main_bg.png);"></div>
-    <!-- /Animated Background -->
+    /* cards */
+    .card {
+      background: var(--sur);
+      border: 1px solid var(--bdr);
+      border-radius: 12px;
+      transition: border-color .3s, transform .3s, box-shadow .3s;
+    }
+    .card:hover {
+      border-color: rgba(0,212,255,.35);
+      transform: translateY(-3px);
+      box-shadow: 0 16px 48px rgba(0,0,0,.45), 0 0 24px rgba(0,212,255,.06);
+    }
 
-    <!-- Loading animation -->
-    <div class="preloader">
-      <div class="preloader-animation">
-        <div class="preloader-spinner">
+    /* section label */
+    .sec-label {
+      display: flex; align-items: center; gap: 12px;
+      margin-bottom: 48px; opacity: 0;
+      transform: translateY(20px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+    .sec-label::after { content:''; flex:1; height:1px; background:linear-gradient(90deg,var(--bdr),transparent); }
+    .sec-label span { font-family:var(--ff-mono); font-size:.7rem; color:var(--cyan); letter-spacing:.16em; }
+
+    /* tags */
+    .tag {
+      display:inline-block; padding:3px 10px; border-radius:4px;
+      font-family:var(--ff-mono); font-size:.64rem; font-weight:600;
+      letter-spacing:.06em; border:1px solid rgba(0,212,255,.22);
+      color:var(--cyan); background:rgba(0,212,255,.06);
+    }
+    .tag-gold  { border-color:rgba(201,168,76,.28); color:var(--gold); background:rgba(201,168,76,.06); }
+    .tag-red   { border-color:rgba(255,59,92,.25); color:var(--red); background:rgba(255,59,92,.05); }
+    .tag-green { border-color:rgba(0,255,157,.25); color:var(--green); background:rgba(0,255,157,.05); }
+    .tags-row  { display:flex; flex-wrap:wrap; gap:6px; margin-top:14px; }
+
+    /* reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .75s ease, transform .75s ease;
+    }
+    .reveal.vis { opacity:1; transform:none; }
+    .d1 { transition-delay:.08s; }
+    .d2 { transition-delay:.16s; }
+    .d3 { transition-delay:.24s; }
+    .d4 { transition-delay:.32s; }
+
+    /* skill bar */
+    .sbar { height:3px; border-radius:2px; background:var(--sur2); overflow:hidden; }
+    .sbar-fill {
+      height:100%; border-radius:2px;
+      background:linear-gradient(90deg,var(--cyand),var(--cyan));
+      box-shadow:0 0 8px rgba(0,212,255,.45);
+      transform:scaleX(0); transform-origin:left;
+      transition:transform 1.3s cubic-bezier(.16,1,.3,1);
+    }
+    .sbar-fill.go { transform:scaleX(1); }
+
+    /* blink */
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+    .blink { animation:blink 1.1s step-end infinite; }
+
+    /* float */
+    @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+    .float { animation:float 4s ease-in-out infinite; }
+
+    /* pulse dot */
+    @keyframes pulse { 0%{box-shadow:0 0 0 0 rgba(0,255,157,.5)} 70%{box-shadow:0 0 0 8px rgba(0,255,157,0)} 100%{box-shadow:0 0 0 0 rgba(0,255,157,0)} }
+    .pulse-dot { animation:pulse 2s infinite; }
+
+    /* noise grain */
+    body::after {
+      content:''; position:fixed; inset:0; pointer-events:none; z-index:1000;
+      background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+      opacity:.5;
+    }
+
+    /* ─── NAVBAR ───────────────────────────────────────── */
+    #navbar {
+      position:fixed; top:0; left:0; right:0; z-index:900;
+      transition:background .4s, border-color .4s;
+      border-bottom:1px solid transparent;
+    }
+    #navbar.scrolled {
+      background:rgba(4,8,15,.93);
+      border-color:var(--bdr);
+      backdrop-filter:blur(20px);
+      -webkit-backdrop-filter:blur(20px);
+    }
+    .nav-inner {
+      max-width:1160px; margin:0 auto; padding:0 24px;
+      height:66px; display:flex; align-items:center; justify-content:space-between;
+    }
+    .nav-logo { display:flex; align-items:center; gap:10px; }
+    .nav-logo svg { color:var(--cyan); }
+    .nav-logo span { font-family:var(--ff-mono); font-size:.82rem; font-weight:700; letter-spacing:.12em; }
+    .nav-logo span em { color:var(--cyan); font-style:normal; }
+    .nav-links { display:flex; align-items:center; gap:32px; }
+    .nav-links a {
+      font-family:var(--ff-mono); font-size:.7rem; letter-spacing:.14em;
+      text-transform:uppercase; color:var(--mid);
+      transition:color .2s;
+    }
+    .nav-links a:hover { color:var(--cyan); }
+    .nav-cta {
+      font-family:var(--ff-mono); font-size:.7rem; letter-spacing:.1em;
+      text-transform:uppercase; padding:8px 20px; border-radius:6px;
+      border:1px solid var(--cyan); color:var(--cyan);
+      transition:background .25s, box-shadow .25s;
+    }
+    .nav-cta:hover { background:rgba(0,212,255,.1); box-shadow:0 0 20px rgba(0,212,255,.2); }
+    #hamburger { display:none; background:none; border:none; color:var(--cyan); cursor:pointer; padding:4px; }
+    #mobile-menu {
+      display:none; flex-direction:column; gap:18px;
+      padding:20px 24px; background:rgba(4,8,15,.97);
+      border-bottom:1px solid var(--bdr);
+    }
+    #mobile-menu.open { display:flex; }
+    #mobile-menu a { font-family:var(--ff-mono); font-size:.85rem; color:var(--mid); letter-spacing:.1em; }
+
+    /* ─── HERO ─────────────────────────────────────────── */
+    #home {
+      min-height:100vh; display:flex; flex-direction:column;
+      justify-content:center; position:relative; overflow:hidden;
+      padding:clamp(100px,14vw,160px) 24px 80px;
+      background:
+        radial-gradient(ellipse 80% 50% at 15% 25%, rgba(0,212,255,.055) 0%,transparent 60%),
+        radial-gradient(ellipse 60% 55% at 85% 75%, rgba(201,168,76,.045) 0%,transparent 60%),
+        var(--bg);
+    }
+    /* grid lines */
+    #home::before {
+      content:''; position:absolute; inset:0; pointer-events:none;
+      background-image:
+        linear-gradient(rgba(0,212,255,.028) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(0,212,255,.028) 1px,transparent 1px);
+      background-size:60px 60px;
+    }
+    .hero-wrap { max-width:1160px; margin:0 auto; width:100%; position:relative; z-index:1; }
+    .hero-status {
+      display:inline-flex; align-items:center; gap:8px;
+      padding:6px 16px; border-radius:999px; margin-bottom:32px;
+      border:1px solid rgba(0,255,157,.25); background:rgba(0,255,157,.04);
+    }
+    .hero-status span.dot {
+      width:7px; height:7px; border-radius:50%;
+      background:var(--green); display:inline-block;
+    }
+    .hero-status span.txt { font-family:var(--ff-mono); font-size:.68rem; color:var(--green); letter-spacing:.1em; }
+    .hero-name {
+      font-family:var(--ff-disp);
+      font-size:clamp(3.6rem,11vw,9rem);
+      line-height:.92;
+      margin-bottom:28px;
+      color:var(--bright);
+    }
+    .hero-role {
+      font-family:var(--ff-mono); font-size:clamp(.9rem,2.2vw,1.15rem);
+      color:var(--mid); margin-bottom:44px; min-height:1.9em;
+    }
+    .hero-role em { color:var(--cyan); font-style:normal; }
+    .hero-btns { display:flex; flex-wrap:wrap; gap:12px; margin-bottom:64px; }
+    .btn-primary {
+      display:inline-flex; align-items:center; gap:8px;
+      padding:14px 32px; border-radius:8px;
+      background:var(--cyan); color:#04080F;
+      font-family:var(--ff-mono); font-weight:700;
+      font-size:.78rem; letter-spacing:.1em; text-transform:uppercase;
+      transition:box-shadow .25s, transform .25s;
+    }
+    .btn-primary:hover { box-shadow:0 0 32px rgba(0,212,255,.5); transform:translateY(-2px); }
+    .btn-outline {
+      display:inline-flex; align-items:center; gap:8px;
+      padding:14px 28px; border-radius:8px;
+      border:1px solid var(--bdr); color:var(--bright);
+      font-family:var(--ff-mono); font-size:.78rem;
+      letter-spacing:.1em; text-transform:uppercase;
+      transition:border-color .25s, color .25s;
+    }
+    .btn-outline:hover { border-color:var(--cyan); color:var(--cyan); }
+    .btn-icon {
+      display:inline-flex; align-items:center; justify-content:center;
+      width:50px; height:50px; border-radius:8px;
+      border:1px solid var(--bdr); color:var(--mid);
+      font-size:1.1rem; transition:all .25s;
+    }
+    .btn-icon:hover { border-color:var(--cyan); color:var(--cyan); }
+
+    /* stats row */
+    .hero-stats {
+      display:grid; grid-template-columns:repeat(4,1fr);
+      border:1px solid var(--bdr); border-radius:12px; overflow:hidden;
+    }
+    .stat-cell {
+      padding:22px 16px; text-align:center;
+      border-right:1px solid var(--bdr);
+    }
+    .stat-cell:last-child { border-right:none; }
+    .stat-val { font-family:var(--ff-disp); font-size:clamp(2rem,4vw,3rem); color:var(--cyan); line-height:1; }
+    .stat-lbl { font-family:var(--ff-mono); font-size:.65rem; color:var(--mid); margin-top:6px; letter-spacing:.08em; text-transform:uppercase; }
+
+    /* orbs */
+    .orb {
+      position:absolute; border-radius:50%; pointer-events:none;
+      background:radial-gradient(circle,rgba(0,212,255,.07) 0%,transparent 70%);
+    }
+
+    /* ─── ABOUT ────────────────────────────────────────── */
+    .about-grid { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:start; }
+    .about-photo-wrap { position:relative; }
+    .about-photo {
+      width:100%; max-width:340px; border-radius:16px;
+      border:1px solid var(--bdr);
+      object-fit:cover; aspect-ratio:3/4;
+      filter:grayscale(20%) contrast(1.05);
+      transition:filter .3s;
+    }
+    .about-photo:hover { filter:none; }
+    .about-photo-border {
+      position:absolute; inset:-12px; border-radius:22px;
+      border:1px solid rgba(0,212,255,.15); pointer-events:none;
+    }
+    .about-photo-dot {
+      position:absolute; bottom:20px; right:-16px;
+      width:48px; height:48px; border-radius:50%;
+      background:var(--sur); border:2px solid var(--cyan);
+      display:flex; align-items:center; justify-content:center;
+      font-size:1.4rem;
+    }
+    .about-heading { font-family:var(--ff-disp); font-size:clamp(2.2rem,4.5vw,3.6rem); line-height:.95; margin-bottom:24px; }
+    .about-bio { color:var(--mid); line-height:1.8; font-size:.98rem; margin-bottom:16px; }
+    .about-facts { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:28px; }
+    .fact-card { padding:13px 16px; }
+    .fact-key { font-family:var(--ff-mono); font-size:.65rem; color:var(--cyan); letter-spacing:.06em; margin-bottom:4px; }
+    .fact-val { font-family:var(--ff-mono); font-size:.78rem; color:var(--bright); }
+
+    /* pillars */
+    .pillars { display:flex; flex-direction:column; gap:14px; }
+    .pillar { display:flex; gap:16px; align-items:flex-start; padding:18px 20px; }
+    .pillar-icon {
+      width:40px; height:40px; border-radius:9px; flex-shrink:0;
+      display:flex; align-items:center; justify-content:center; font-size:1.2rem;
+    }
+    .pillar-title { font-family:var(--ff-mono); font-size:.8rem; font-weight:700; color:var(--bright); margin-bottom:5px; }
+    .pillar-desc  { font-size:.86rem; color:var(--mid); line-height:1.55; }
+
+    /* ─── SKILLS ───────────────────────────────────────── */
+    .skills-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(272px,1fr)); gap:18px; margin-bottom:52px; }
+    .skill-group { padding:20px 18px; }
+    .sg-header { display:flex; align-items:center; gap:11px; margin-bottom:13px; }
+    .sg-icon {
+      width:34px; height:34px; border-radius:8px;
+      display:flex; align-items:center; justify-content:center;
+      font-size:1.05rem; flex-shrink:0;
+    }
+    .sg-title { font-family:var(--ff-mono); font-size:.78rem; font-weight:700; color:var(--bright); }
+    .sg-sub   { font-family:var(--ff-mono); font-size:.62rem; letter-spacing:.05em; }
+    .sg-tags  { display:flex; flex-wrap:wrap; gap:5px; }
+    .sg-tag   {
+      display:inline-block; padding:2px 8px; border-radius:3px;
+      font-family:var(--ff-mono); font-size:.62rem; font-weight:600;
+      letter-spacing:.04em; color:var(--mid);
+    }
+
+    /* proficiency */
+    .prof-card { padding:28px 26px; }
+    .prof-title { font-family:var(--ff-mono); font-size:.75rem; color:var(--cyan); margin-bottom:26px; letter-spacing:.07em; }
+    .prof-row   { margin-bottom:20px; }
+    .prof-meta  { display:flex; justify-content:space-between; margin-bottom:8px; }
+    .prof-name  { font-size:.88rem; color:var(--bright); }
+    .prof-pct   { font-family:var(--ff-mono); font-size:.75rem; color:var(--cyan); }
+
+    /* ─── EXPERIENCE ───────────────────────────────────── */
+    .exp-list { display:flex; flex-direction:column; gap:22px; }
+    .exp-card { padding:26px 26px 22px; border-left:3px solid var(--bdr); border-radius:0 12px 12px 0; }
+    .exp-top  { display:flex; flex-wrap:wrap; justify-content:space-between; align-items:flex-start; gap:12px; margin-bottom:10px; }
+    .exp-role { font-family:var(--ff-mono); font-size:.92rem; font-weight:700; color:var(--bright); margin-bottom:5px; }
+    .exp-meta { display:flex; flex-wrap:wrap; align-items:center; gap:8px; }
+    .exp-co   { font-family:var(--ff-mono); font-size:.8rem; font-weight:600; }
+    .exp-loc  { font-family:var(--ff-mono); font-size:.72rem; color:var(--mid); }
+    .exp-dot  { color:var(--muted); }
+    .tenure {
+      font-family:var(--ff-mono); font-size:.7rem;
+      padding:5px 12px; border-radius:6px;
+      border:1px solid var(--bdr); color:var(--mid);
+      white-space:nowrap;
+    }
+    .tenure.active { border-color:rgba(0,212,255,.4); color:var(--cyan); background:rgba(0,212,255,.06); }
+    .active-badge {
+      font-family:var(--ff-mono); font-size:.62rem; color:var(--green);
+      display:flex; align-items:center; gap:4px;
+    }
+    .award-pill {
+      display:inline-block; margin:10px 0; padding:5px 12px; border-radius:6px;
+      border:1px solid rgba(201,168,76,.3); background:rgba(201,168,76,.06);
+      font-family:var(--ff-mono); font-size:.72rem; color:var(--gold);
+    }
+    .exp-bullets { list-style:none; margin:12px 0; display:flex; flex-direction:column; gap:8px; }
+    .exp-bullets li { display:flex; gap:10px; font-size:.88rem; color:var(--mid); line-height:1.6; }
+    .bullet-arrow { flex-shrink:0; margin-top:2px; }
+
+    /* ─── CERTS ────────────────────────────────────────── */
+    .certs-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(252px,1fr)); gap:16px; margin-bottom:48px; }
+    .cert-card { padding:20px 18px; }
+    .cert-top  { display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; }
+    .cert-logo { width:56px; height:56px; object-fit:contain; border-radius:8px; border:1px solid var(--bdr); background:var(--sur2); padding:6px; }
+    .cert-year { font-family:var(--ff-mono); font-size:.68rem; color:var(--muted); }
+    .cert-abbr-pill {
+      display:inline-block; padding:3px 9px; border-radius:4px;
+      font-family:var(--ff-mono); font-size:.68rem; font-weight:700; margin-bottom:6px;
+    }
+    .cert-name { font-family:var(--ff-mono); font-size:.76rem; font-weight:700; color:var(--bright); margin-bottom:3px; line-height:1.4; }
+    .cert-issuer { font-family:var(--ff-mono); font-size:.68rem; margin-bottom:8px; }
+    .cert-desc  { font-size:.8rem; color:var(--mid); line-height:1.5; }
+
+    /* awards */
+    .awards-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:14px; }
+    .award-card  { display:flex; gap:13px; align-items:flex-start; padding:14px 15px; border-radius:8px; border:1px solid rgba(201,168,76,.18); background:rgba(201,168,76,.04); }
+    .award-icon  { font-size:1.4rem; flex-shrink:0; }
+    .award-title { font-family:var(--ff-mono); font-size:.75rem; font-weight:700; color:var(--gold); margin-bottom:4px; }
+    .award-desc  { font-size:.78rem; color:var(--mid); line-height:1.4; }
+
+    /* ─── CONTACT ──────────────────────────────────────── */
+    .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
+    .contact-heading { font-family:var(--ff-disp); font-size:clamp(2.4rem,5vw,4rem); line-height:.95; margin-bottom:22px; }
+    .contact-para { color:var(--mid); line-height:1.8; font-size:.98rem; margin-bottom:28px; }
+    .contact-cmd { display:inline-block; padding:14px 20px; border-radius:8px; }
+    .contact-cmd span.prompt { color:var(--cyan); }
+    .contact-cmd span.arg { color:var(--mid); }
+    .contact-cmd span.str { color:var(--gold); }
+    .contact-info { margin-top:24px; display:flex; flex-direction:column; gap:8px; }
+    .contact-info-row { font-family:var(--ff-mono); font-size:.78rem; color:var(--mid); }
+    .contact-info-row em { color:var(--cyan); font-style:normal; }
+    .contact-links { display:flex; flex-direction:column; gap:13px; }
+    .c-link {
+      display:flex; align-items:center; gap:15px;
+      padding:16px 18px; border-radius:11px;
+      transition:all .25s;
+    }
+    .c-link:hover { transform:translateX(4px); }
+    .c-link-icon {
+      width:42px; height:42px; border-radius:9px;
+      display:flex; align-items:center; justify-content:center;
+      font-size:1.15rem; flex-shrink:0;
+    }
+    .c-link-label { font-family:var(--ff-mono); font-size:.65rem; color:var(--mid); letter-spacing:.07em; margin-bottom:3px; }
+    .c-link-val   { font-family:var(--ff-mono); font-size:.82rem; color:var(--bright); }
+    .c-arrow { margin-left:auto; color:var(--muted); font-size:1rem; }
+
+    /* ─── FOOTER ───────────────────────────────────────── */
+    footer {
+      border-top:1px solid var(--bdr); padding:24px;
+    }
+    .footer-inner {
+      max-width:1160px; margin:0 auto;
+      display:flex; flex-wrap:wrap; justify-content:space-between;
+      align-items:center; gap:10px;
+    }
+    .footer-copy { font-family:var(--ff-mono); font-size:.72rem; color:var(--muted); }
+    .footer-copy em { color:var(--cyan); font-style:normal; }
+    .footer-built { font-family:var(--ff-mono); font-size:.72rem; color:var(--muted); }
+    .footer-built em { color:var(--cyan); font-style:normal; }
+    .footer-status { font-family:var(--ff-mono); font-size:.72rem; color:var(--mid); display:flex; align-items:center; gap:6px; }
+
+    /* ─── RESPONSIVE ───────────────────────────────────── */
+    @media(max-width:900px) {
+      .about-grid { grid-template-columns:1fr; }
+      .about-photo-wrap { display:none; }
+      .contact-grid { grid-template-columns:1fr; }
+      .hero-stats { grid-template-columns:repeat(2,1fr); }
+      .hero-stats .stat-cell:nth-child(2) { border-right:none; }
+      .hero-stats .stat-cell:nth-child(3) { border-top:1px solid var(--bdr); }
+      .hero-stats .stat-cell:nth-child(4) { border-top:1px solid var(--bdr); border-right:none; }
+    }
+    @media(max-width:640px) {
+      .nav-links { display:none; }
+      #hamburger { display:block; }
+      .hero-stats { grid-template-columns:repeat(2,1fr); }
+      .about-facts { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════
+     NAVBAR
+════════════════════════════════════════════════════════ -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="nav-logo">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+      </svg>
+      <span>BAK<em>.</em>SEC</span>
+    </a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#certifications">Certs</a>
+      <a href="#contact">Contact</a>
+      <a href="mailto:khan.bilal88@gmail.com" class="nav-cta">Hire Me</a>
+    </div>
+    <button id="hamburger" aria-label="Toggle menu">
+      <svg id="ham-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+  </div>
+  <div id="mobile-menu">
+    <a href="#about"          onclick="closeMob()">About</a>
+    <a href="#skills"         onclick="closeMob()">Skills</a>
+    <a href="#experience"     onclick="closeMob()">Experience</a>
+    <a href="#certifications" onclick="closeMob()">Certifications</a>
+    <a href="#contact"        onclick="closeMob()">Contact</a>
+    <a href="mailto:khan.bilal88@gmail.com" style="color:var(--cyan)">Hire Me →</a>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════════════════
+     HERO
+════════════════════════════════════════════════════════ -->
+<section id="home">
+  <div class="orb" style="width:400px;height:400px;top:10%;right:5%;"></div>
+  <div class="orb" style="width:250px;height:250px;bottom:20%;left:3%;background:radial-gradient(circle,rgba(201,168,76,.06) 0%,transparent 70%);"></div>
+
+  <div class="hero-wrap">
+    <div class="hero-status reveal">
+      <span class="dot pulse-dot"></span>
+      <span class="txt">AVAILABLE FOR ENGAGEMENTS &nbsp;·&nbsp; #OPENTOWORK </span>
+    </div>
+
+    <h1 class="hero-name reveal">
+      BILAL<br>
+      <span class="g-cyan">AHMED</span><br>
+      KHAN
+    </h1>
+
+    <div class="hero-role reveal">
+      <em>// </em><span id="typewriter"></span><span class="blink" style="color:var(--cyan)">|</span>
+    </div>
+
+    <div class="hero-btns reveal">
+      <a href="#experience" class="btn-primary">View Experience</a>
+      <a href="mailto:khan.bilal88@gmail.com" class="btn-outline">Get In Touch</a>
+      <a href="https://linkedin.com/in/bilalkhan88" target="_blank" rel="noopener noreferrer" class="btn-icon" title="LinkedIn">in</a>
+      <a href="https://github.com/bilalk88" target="_blank" rel="noopener noreferrer" class="btn-icon" title="GitHub">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+      </a>
+    </div>
+
+    <div class="hero-stats reveal">
+      <div class="stat-cell">
+        <div class="stat-val" data-target="15" data-suffix="+">0+</div>
+        <div class="stat-lbl">Years in Security</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-val" data-target="100" data-suffix="+">0+</div>
+        <div class="stat-lbl">Apps Pentested</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-val" data-target="600" data-suffix="+">0+</div>
+        <div class="stat-lbl">IPs Assessed</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-val" data-target="9" data-suffix="">0</div>
+        <div class="stat-lbl">Certifications</div>
+      </div>
+    </div>
+  </div>
+
+  <a href="#about" class="float" style="position:absolute;bottom:32px;left:50%;transform:translateX(-50%);color:var(--muted);">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+  </a>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     ABOUT
+════════════════════════════════════════════════════════ -->
+<section id="about" class="sec">
+  <div class="wrap">
+    <div class="sec-label reveal"><span>01 / ABOUT</span></div>
+
+    <div class="about-grid">
+      <!-- Photo -->
+      <div class="about-photo-wrap reveal">
+        <img src="img/main_photo.jpg" alt="Bilal Ahmed Khan" class="about-photo" />
+        <div class="about-photo-border"></div>
+        <div class="about-photo-dot">🛡️</div>
+      </div>
+
+      <!-- Content -->
+      <div>
+        <h2 class="about-heading reveal">
+          15+ YEARS<br><span class="g-cyan">SECURING</span><br>THE ENTERPRISE
+        </h2>
+        <p class="about-bio reveal">
+          I'm a Senior Application Security Engineer with deep expertise spanning <strong style="color:var(--bright)">Web, API, Mobile (Android), and Thick-Client</strong> penetration testing. My engagements cover BFSI, Telecom, Retail, and Government sectors across Saudi Arabia, India, Canada, the Middle East, and the United States.
+        </p>
+        <p class="about-bio reveal">
+          Currently at <strong style="color:var(--gold)">Flint International</strong> (SITE / NCA), I secure business-critical applications for major PIF-backed entities, define AppSec KPIs, and drive end-to-end vulnerability lifecycle management across GitLab CI/CD pipelines.
+        </p>
+        <div class="about-facts">
+          <div class="fact-card card reveal d1"><div class="fact-key">📍 Location</div><div class="fact-val">Riyadh, Saudi Arabia</div></div>
+          <div class="fact-card card reveal d2"><div class="fact-key">🏢 Current</div><div class="fact-val">SITE / NCA via Flint</div></div>
+          <div class="fact-card card reveal d3"><div class="fact-key">🌍 Sectors</div><div class="fact-val">BFSI · Telecom · Gov · SaaS</div></div>
+          <div class="fact-card card reveal d4"><div class="fact-key">🗣️ Languages</div><div class="fact-val">EN · HI · UR · MR</div></div>
         </div>
       </div>
     </div>
-    <!-- /Loading animation -->
 
-    <div class="page">
-      <div class="page-content">
-
-          <header id="site_header" class="header mobile-menu-hide">
-            <div class="header-content">
-              <div class="header-photo">
-                <img src="img/main_photo.jpg" alt="Alex Smith">
-              </div>
-              <div class="header-titles">
-                <h2>BILAL KHAN</h2>
-                <h4>Application Security Engineer</h4>
-              </div>
-            </div>
-
-            <ul class="main-menu">
-              <li class="active">
-                <a href="#home" class="nav-anim">
-                  <span class="menu-icon lnr lnr-home"></span>
-                  <span class="link-text">Home</span>
-                </a>
-              </li>
-              <li>
-                <a href="#about-me" class="nav-anim">
-                  <span class="menu-icon lnr lnr-user"></span>
-                  <span class="link-text">About Me</span>
-                </a>
-              </li>
-              <li>
-                <a href="#resume" class="nav-anim">
-                  <span class="menu-icon lnr lnr-graduation-hat"></span>
-                  <span class="link-text">Resume</span>
-                </a>
-              </li>
-              <!--<li>
-                <a href="#portfolio" class="nav-anim">
-                  <span class="menu-icon lnr lnr-briefcase"></span>
-                  <span class="link-text">Portfolio</span>
-                </a>
-              </li>-->
-              <li>
-                <a href="#blog" class="nav-anim">
-                  <span class="menu-icon lnr lnr-book"></span>
-                  <span class="link-text">Blog</span>
-                </a>
-              </li>
-              <li>
-                <a href="#contact" class="nav-anim">
-                  <span class="menu-icon lnr lnr-envelope"></span>
-                  <span class="link-text">Contact</span>
-                </a>
-              </li>
-            </ul>
-
-            <div class="social-links">
-              <ul>
-                <li><a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-                <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
-              </ul>
-            </div>
-
-            <div class="header-buttons">
-              <a href="#" target="_blank" class="btn btn-primary">Download CV</a>
-            </div>
-
-            <div class="copyrights">© 2023 All rights reserved.</div>
-          </header>
-
-          <!-- Mobile Navigation -->
-          <div class="menu-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <!-- End Mobile Navigation -->
-
-          <!-- Arrows Nav -->
-          <div class="lmpixels-arrows-nav">
-            <div class="lmpixels-arrow-right"><i class="lnr lnr-chevron-right"></i></div>
-            <div class="lmpixels-arrow-left"><i class="lnr lnr-chevron-left"></i></div>
-          </div>
-          <!-- End Arrows Nav -->
-
-          <div class="content-area">
-            <div class="animated-sections">
-              <!-- Home Subpage -->
-              <section data-id="home" class="animated-section start-page">
-                <div class="section-content vcentered">
-
-                    <div class="row">
-                      <div class="col-sm-12 col-md-12 col-lg-12">
-                        <div class="title-block">
-                          <h2>BILAL KHAN</h2>
-                          <div class="owl-carousel text-rotation">                                    
-                            <div class="item">
-                              <div class="sp-subtitle">Application Security Engineer</div>
-                            </div>
-                            
-                            <!--<div class="item">
-                              <div class="sp-subtitle">.</div>
-                            </div>-->
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                </div>
-              </section>
-              <!-- End of Home Subpage -->
-
-              <!-- About Me Subpage -->
-              <section data-id="about-me" class="animated-section">
-                <div class="section-content">
-                  <div class="page-title">
-                    <h2>About <span>Me</span></h2>
-                  </div>
-
-                  <!-- Personal Information -->
-                  <div class="row">
-                    <div class="col-xs-12 col-sm-7">
-                      <p>Seasoned cybersecurity engineer with over 15 years of expertise in securing web, mobile, API, and thick-client applications through comprehensive vulnerability assessments, penetration testing, and both manual and automated code reviews. Skilled in designing and automating security testing processes for web applications and APIs using a combination of commercial and open-source tools alongside custom scripts to efficiently identify security vulnerabilities. Proven track record in implementing secure coding standards, conducting threat modeling, and fostering collaboration with engineering teams to integrate security throughout the software development lifecycle. Proficient in DevSecOps practices, seamlessly integrating security automation into CI/CD pipelines while providing strong mentorship by training team members and developers on secure coding, vulnerability mitigation, and industry best practices.</p>
-                    </div>
-
-                    <div class="col-xs-12 col-sm-5">
-                      <div class="info-list">
-                        <ul>
-                          <li>
-                            <span class="title">Residence</span>
-                            <span class="value">INDIA</span>
-                          </li>
-
-                          <li>
-                            <span class="title">Address</span>
-                            <span class="value">Mumbai, Maharashtra</span>
-                          </li>
-
-                          <li>
-                            <span class="title">e-mail</span>
-                            <span class="value">XYZ@XYZ.COM</span>
-                          </li>
-
-                          <li>
-                            <span class="title">Phone</span>
-                            <span class="value">+91 99XX 9XX YYY</span>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- End of Personal Information -->
-
-                  <div class="white-space-50"></div>
-
-                  <!-- Services -->
-                  <div class="row">
-                    <div class="col-xs-12 col-sm-12">
-                      <div class="block-title">
-                        <h3>Who <span>Am I</span></h3>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-xs-12 col-sm-12">
-					<p>As an Application Security Engineer, I am dedicated to fortifying digital landscapes and ensuring the resilience of software applications. With a strong foundation in cybersecurity and a keen eye for identifying vulnerabilities, I specialize in crafting robust security measures to safeguard critical data and systems.</p>
-					<p>My expertise extends to conducting comprehensive security assessments, penetration testing, and code reviews to pinpoint and remediate vulnerabilities early in the development lifecycle. I am well-versed in industry best practices and frameworks, ensuring that applications meet stringent security standards.</p>
-					<p>Collaboration is at the core of my approach, working closely with cross-functional teams to integrate security seamlessly into the software development process. I am passionate about staying updated with emerging threats and technologies, enabling me to provide proactive solutions that protect against the ever-evolving threat landscape.</p>
-					</div>
-					
-                  </div>
-                  <!-- End of Services -->
-
-                  <div class="white-space-30"></div>          
-
-                 <!-- <div class="white-space-50"></div> -->
-                  
-                </div>
-              </section>
-              <!-- End of About Me Subpage -->
-
-              <!-- Resume Subpage -->
-              <section data-id="resume" class="animated-section">
-                <div class="section-content">  
-                  <div class="page-title">
-                    <h2>Resume</h2>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-xs-12 col-sm-7">
-
-                      <div class="block-title">
-                        <h3>Education</h3>
-                      </div>
-                      
-                      <div class="timeline timeline-second-style clearfix">
-                        <div class="timeline-item clearfix">
-                          <div class="left-part">
-                            <h5 class="item-period">2010</h5>
-                            <!--<span class="item-company">University of Mumbai</span>-->
-                          </div>
-                          <div class="divider"></div>
-                          <div class="right-part">
-                            <h4 class="item-title">Bachelor of Science (Information Technology)</h4>
-							<span class="item-company">University of Mumbai</span>
-                            <!--<p></p>-->
-                          </div>
-                        </div>
-
-                        <div class="timeline-item clearfix">
-                          <div class="left-part">
-                            <h5 class="item-period">2006</h5>
-                            <!--<span class="item-company">Maharashtra Board</span>-->
-                          </div>
-                          <div class="divider"></div>
-                          <div class="right-part">
-                            <h4 class="item-title">Higher Secondary Certificate (H.S.C)</h4>
-                            <span class="item-company">Maharashtra Board</span>
-                            <!--<p></p>-->
-                          </div>
-                        </div>
-						
-						<div class="timeline-item clearfix">
-                          <div class="left-part">
-                            <h5 class="item-period">2004</h5>
-                            <!--<span class="item-company">Maharashtra Board</span>-->
-                          </div>
-                          <div class="divider"></div>
-                          <div class="right-part">
-                            <h4 class="item-title">Secondary School Certificate (S.S.C)</h4>
-                            <span class="item-company">Maharashtra Board</span>
-                            <!--<p></p>-->
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="white-space-50"></div>
-
-                      <div class="block-title">
-                        <h3>Work Experience</h3>
-                      </div>
-
-                      <div class="timeline timeline-second-style clearfix">
-
-                        <div class="timeline-item clearfix">
-                          <div class="left-part">
-                            <h5 class="item-period">Jan 2026 - Current</h5>
-                            <span class="item-company">Flint International</span>
-                          </div>
-                          <div class="divider"></div>
-                          <div class="right-part">
-                            <h4 class="item-title">Senior Application Security Consultant</h4>
-                            <h3 class="item-title">Riyadh, Saudi Arabia - (On-site Contract)</h3>
-                            <p>
-                              <li>Defined and established Key Performance Indicators (KPIs) to measure the effectiveness, coverage, and maturity of application security testing initiatives</li>
-                              <li>Conducted rigorous manual and automated security testing, specializing in complex business logic vulnerabilities and injection-based attacks</li>
-                              <li>Orchestrated automated security testing within GitLab CI/CD pipelines, managing Static Application Security Testing (SAST), Software Composition Analysis (SCA), and secret scanning integrations.</li>
-                              <li>Administered Dynamic Application Security Testing (DAST) scans across various environments, conducting deep-dive analysis to systematically eliminate false positives</li>
-                              <li>Triaged and prioritized identified security flaws based on contextual risk and business impact, actively tracking issues through to resolution using Jira tool</li>                              
-                            </p>
-                          </div>
-                        </div>
-
-                        <div class="timeline-item clearfix">
-                          <div class="left-part">
-                            <h5 class="item-period">Oct 2022 - Dec 2026</h5>
-                            <span class="item-company">ConnectWise LLP</span>
-                          </div>
-                          <div class="divider"></div>
-                          <div class="right-part">
-                            <h4 class="item-title">Principal Product Security Engineer</h4>
-                            <h4 class="item-title">Mumbai, Maharashtra</h4>
-                            <p>
-                              <li>Implemented a secure code practice platform by leveraging SecureCodingDojo and provided a training to development teams, resulting in a 30% reduction in security vulnerabilities</li>
-                              <li>Led and conducted Internal Penetration testing and Threat Hunting to identify vulnerabilities in a web applications and API including network/ infrastructure</li>
-                              <li>Reporting and conducting vulnerability triage with development teams on timely basis</li>
-                              <li>Successfully led and mentored interns, Implemented PTES (Penetration Testing Execution Standard) methodology within the organization, and conducted 1:1 session</li>
-                              <li>Shift-left initiative by creating Security Championship program and ensuring that development teams are building applications in secure manner, right from initial phase of designing</li>
-                              <li>Worked with DevOps team to integrate security tools in Pipeline to detect vulnerabilities in source code</li>
-                              <li>Updated technical documentation, product specifications and technical training materials</li>
-                              <li>Integrated Snyk tool in GitLab Pipeline to perform SCA, SAST, Container and IaC Scans to identify vulnerabilities and notify to development team about Pipeline build</li>
-                              <li>Conducted internal security awareness trainings, CTF and phishing campaigns to educate employees about security best practices and raise awareness about potential risk</li>
-                            </p>
-                          </div>
-                        </div>
-
-                        <div class="timeline-item clearfix">
-                          <div class="left-part">
-                            <h5 class="item-period">July 2021 - Oct 2022</h5>
-                            <span class="item-company">Accenture</span>
-                          </div>
-                          <div class="divider"></div>
-                          <div class="right-part">
-                            <h4 class="item-title">Technology Security Associate Manager</h4>
-                            <h4 class="item-title">Mumbai, Maharashtra</h4>
-                            <p>
-                              <li>Led projects and analyzed data to identify opportunities for improvement</li>
-                              <li>Led one of the largest security assessment project where around more than 100+ applications were in scope for SAST, DAST, SCA and Penetration testing including DevSecOps</li>
-                              <li>Managed a team of 4 members, active participants in quality result driven and reviewing the assessment outcome</li>
-                              <li>Closely worked with development / Infrastructure team for remediation plan to fix the identified vulnerabilities in timely manner</li>
-                              <li>Created a labs for vulnerable machines to host a Capture The Flag (CTF) event within the organization</li>
-                              <li>Trained team to execute security testing projects</li>
-							            </p>
-                          </div>
-                        </div>
-                        
-                        <div class="timeline-item clearfix">
-                          <div class="left-part">
-                            <h5 class="item-period">Jan 2020 - July 2021</h5>
-                            <span class="item-company">KPMG</span>
-                          </div>
-                          <div class="divider"></div>
-                          <div class="right-part">
-                            <h4 class="item-title">Manager</h4>
-                            <h4 class="item-title">Mumbai, Maharashtra</h4>
-                            <p>
-                              <li>Delivered various projects and worked with clients across multiple geographies including Middle East, Canada and United States and has experience serving across a different domain such as Banking, Telecom, Retail and Pharmaceutical</li>
-                              <li>Performed Security Testing on 100+ Web and 30+ Mobile (Android) based applications</li>
-                              <li>Performed Vulnerability Assessment and Penetration Testing on 600+ IP's</li>
-                              <li>Prepared comprehensive client reports detailing the outcome of all testing with appropriate recommendations and discussed with different stakeholders to make them understand</li>
-                              <li>Assisted project team in understanding risk & threat level associated with reported vulnerabilities according to business criticality</li>
-                              <li>Conducted Secure Configuration & Endpoint review to identify gaps, recommended technical solutions, process, and procedures to check and reinforce security best practices on the network</li>
-                              <li>Developed Minimum Security Baseline/ MBSS for Network devices, Windows Servers, Linux Servers, Docker and Container</li>
-                              <li>Conducted risk and business development work such as responding to RFP, making proposals and costing sheets</li>
-                              <li>Implemented DevSecOps culture in the client environment and helping clients to implement Secure SDLC for application development and deployment</li>
-							              </p>
-                          </div>
-                        </div>
-						
-						<div class="timeline-item clearfix">
-                          <div class="left-part">
-                            <h5 class="item-period">June 2019 - Jan 2020</h5>
-                            <span class="item-company">Cornerstone OnDemand</span>
-                          </div>
-                          <div class="divider"></div>
-                          <div class="right-part">
-                            <h4 class="item-title">Application Security Engineer</h4>
-                            <h4 class="item-title">Mumbai, Maharashtra</h4>
-                            <p>
-                              <li>Performed Penetration Testing on Web, thick client and Mobile Applications rolled out before the quarterly release</li>
-                              <li>Monitor, Maintain and enhance the Vulnerability Management Program for defects and vulnerabilities observed</li>
-                              <li>Developed GSL (Governance Specification Language) rules and alerts for Dome9 to monitor the current security posture of the AWS environment</li>
-                              <li>Performed project leadership tasks on selected security projects to improve and enhance security posture</li>
-                              <li>Integrated an automated DAST Web app and API scanning by using Burp Suite, Selenium, Postman and Jenkins as well as Software Composition Analysis (SCA) tool i.e., Snyk to identify vulnerabilities in the open source or third-party libraries in the CI/CD Pipeline</li>
-                              <li>Conducted social engineering attacks for number of clients across sectors that included creating and running a tailored and targeted phishing and vishing campaign for the client organization’s employees to make them submit their sensitive corporate information such as email id, username, password, employee number</li>
-                              <li>Validated and verified system security requirements definitions and analyzed system security designs</li>
-							              </p>
-                          </div>
-                        </div>
-						
-						<div class="timeline-item clearfix">
-                          <div class="left-part">
-                            <h5 class="item-period">Jan 2011 - May 2019</h5>
-                            <span class="item-company">Continuum Managed Solutions Pvt. Ltd</span>
-                          </div>
-                          <div class="divider"></div>
-                          <div class="right-part">
-                            <h4 class="item-title">Principal Quality Engineer</h4>
-                            <h4 class="item-title">Mumbai, Maharashtra</h4>
-                            <p>
-                              <li>Active involvement with various Development teams starting from design phase to product development</li>
-                              <li>Managed a team of 5 members and tracked the progress of testing and release cycle</li>
-                              <li>Involved in System testing and acceptance testing and analyzing business and end user requirements, preparation of test strategy and test plan, verifying and approving the test environment</li>
-                              <li>Created Analysis reports on JIRA and Confluence, and manage the test cases and results in TestRail</li>
-                              <li>Assessed software bugs and compiled findings along with suggested resolutions for development team members</li>
-                              <li>Gathered data on integration issues and vulnerabilities and outlined improvement recommendations</li>
-                              <li>Created accurate and successful test scripts to manage automated testing of certain products and features</li>
-                              <li>Wrote and optimized test cases to maximize success of manual software testing with consistent, thorough approaches</li>
-                              <li>Closely worked with the developers to identified the cause of error and to find the possible solution for same</li>
-                              <li>Worked with InfoSec team, to perform common vulnerability assessment for web application like broken authentication / authorization, XSS, SQL Injection etc</li>
-							              </p>
-                          </div>
-                        </div>
-                      </div>
-
-                    </div>
-
-                    <!-- Skills & Certificates -->
-                    <div class="col-xs-12 col-sm-5">
-					
-					<!-- Knowledges -->
-                      <div class="block-title">
-                        <h3> <span>Skills</span></h3>
-                      </div>
-
-                      <ul class="knowledges">
-                        <li>Application Security Testing</li>
-                        <li>Vulnerability Assessment & Penetration Testing</li>
-                        <li>Static Application Security Testing (SAST)</li>
-                        <li>Dynamic Application Security Testing (DAST)</li>
-                        <li>Software Composition Analysis (SCA)</li>
-                        <li>DevSecOps</li>
-                        <li>GitLab / GitHub</li>
-                        <li>Cloud Security</li>
-                        <li>Burp Suite Pro</li>
-                        <li>NMAP</li>
-                        <li>Nessus</li>
-                        <li>SQLMap</li>
-                        <li>Agile Methodology</li>
-                        <li>Azure DevOps</li>
-                        <li>Functional Testing</li>
-                        <li>Manual Testing</li>
-                        <li>Acunetix / Netsparker (Invicti)</li>
-                        <li>Threat Modelling</li>
-                        <li>Jenkins</li>
-                        <li>Vulnerability Management</li>
-                      </ul>
-                      <!-- End of Knowledges -->
-					  
-					  <div class="white-space-50"></div>
-					  
-					  <div class="white-space-10"></div>
-					  
-					  
-					  <!-- Achievements -->
-                      <div class="block-title">
-                        <h3> <span>Achievements</span></h3>
-                      </div>
-
-                      <div class="skills-info skills-second-style">
-                        <!-- Achievements 1 -->
-                        <div class="skill clearfix">
-                          <h4>Employee of the Year</h4>
-                          <div class="skill-value">Employee of the Year for best performance in testing and managing the applications</div>
-                        </div>
-                        <div class="skill-container skill-9">
-                          <div class="skill-percentage"></div>
-                        </div>
-                        <!-- End of Achievements 1 -->
-                        
-                        <!-- Achievements 2 -->
-                        <div class="skill clearfix">
-                          <h4>Team Maestro Security Award</h4>
-                          <div class="skill-value">Awarded with Team Maestro for Security incident handling</div>
-                        </div>
-                        <div class="skill-container skill-9">
-                          <div class="skill-percentage"></div>
-                        </div>
-                        <!-- End of Achievements 2 -->
-                        
-                        <!-- Achievements 3 -->
-                        <div class="skill clearfix">
-                          <h4>Spot Award</h4>
-                          <div class="skill-value">Spot award for fixing the clients server critical issue within a 24 hour</div>
-                        </div>
-                        <div class="skill-container skill-9">
-                          <div class="skill-percentage"></div>
-                        </div>
-                        <!-- End of Achievements 3 -->
-                        
-                        <!-- Achievements 4 -->
-                        <div class="skill clearfix">
-                          <h4>Team Award</h4>
-                          <div class="skill-value">Awarded with Team award for best application implementation and integration</div>
-                        </div>
-                        <div class="skill-container skill-9">
-                          <div class="skill-percentage"></div>
-                        </div>
-                        <!-- End of Achievements 4 -->
-						
-						<!-- Achievements 5 -->
-                        <div class="skill clearfix">
-                          <h4>STAR Performer</h4>
-                          <div class="skill-value">Awarded with STAR Performer for the Quarter release</div>
-                        </div>
-                        <div class="skill-container skill-9">
-                          <div class="skill-percentage"></div>
-                        </div>
-                        <!-- End of Achievements 5 -->
-						
-						<!-- Achievements 6 -->
-                        <div class="skill clearfix">
-                          <h4>ENCORE - Rising Star Award</h4>
-                          <div class="skill-value">Awarded with Rising Start award for the Quarter 1 – April 2020 – June2020 in KPMG</div>
-                        </div>
-                        <div class="skill-container skill-9">
-                          <div class="skill-percentage"></div>
-                        </div>
-                        <!-- End of Achievements 6 -->
-
-                      </div>
-                      <!-- End of Achievements -->
-					  
-					  <div class="white-space-10"></div>
-					  
-                      <!-- Languages -->
-                      <div class="block-title">
-                        <h3> <span>Languages</span></h3>
-                      </div>
-
-                      <div class="skills-info skills-second-style">
-                        <!-- Language 1 -->
-                        <div class="skill clearfix">
-                          <h4>English</h4>
-                          <div class="skill-value">Professional Working Proficiency</div>
-                        </div>
-                        <div class="skill-container skill-1">
-                          <div class="skill-percentage"></div>
-                        </div>
-                        <!-- End of Language 1 -->
-                        
-                        <!-- Language 2 -->
-                        <div class="skill clearfix">
-                          <h4>Hindi</h4>
-                          <div class="skill-value">Full Professional Proficiency</div>
-                        </div>
-                        <div class="skill-container skill-2">
-                          <div class="skill-percentage"></div>
-                        </div>
-                        <!-- End of Language 2 -->
-                        
-                        <!-- Language 3 -->
-                        <div class="skill clearfix">
-                          <h4>Urdu</h4>
-                          <div class="skill-value">Full Professional Proficiency</div>
-                        </div>
-                        <div class="skill-container skill-3">
-                          <div class="skill-percentage"></div>
-                        </div>
-                        <!-- End of Language 3 -->
-                        
-                        <!-- Language 4 -->
-                        <div class="skill clearfix">
-                          <h4>Marathi</h4>
-                          <div class="skill-value">Limited Working Proficiency</div>
-                        </div>
-                        <div class="skill-container skill-4">
-                          <div class="skill-percentage"></div>
-                        </div>
-                        <!-- End of Language 4 -->
-
-                      </div>
-                      <!-- End of Languages -->
-
-                      <div class="white-space-10"></div>
-					                        
-                    </div>
-                    <!-- End of Skills & Certificates -->
-                  </div>
-
-                  <div class="white-space-50"></div>
-
-                  <!-- Certificates -->
-                  <div class="row">
-                    <div class="col-xs-12 col-sm-12">
-                      <div class="block-title">
-                        <h3>Certificates</h3>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div class="row">
-                    <!-- Certificate 1 -->
-                    <div class="col-xs-12 col-sm-6">
-                      <div class="certificate-item clearfix">
-                        <div class="certi-logo">
-                          <img src="img/certs/CARTP.jpg" alt="logo">
-                        </div>
-                        
-                        <div class="certi-content">
-                          <div class="certi-title">
-                            <h4>Certified Az Red Team Professional (CARTP)</h4>
-                          </div>
-                          <!--<div class="certi-id">
-                            <span>Membership ID: XXXX</span>
-                          </div>-->
-                          <div class="certi-date">
-                            <span>August 2018</span>
-                          </div>
-                          <div class="certi-company">
-                            <span></span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- End of Certificate 1 -->
-
-                    <!-- Certificate 2 -->
-                    <div class="col-xs-12 col-sm-6">
-                      <div class="certificate-item clearfix">
-                        <div class="certi-logo">
-                          <img src="img/certs/CPSA.png" alt="logo">
-                        </div>
-                        
-                        <div class="certi-content">
-                          <div class="certi-title">
-                            <h4>CREST Practitioner Security Analyst (CPSA)</h4>
-                          </div>
-                          <!--<div class="certi-id">
-                            <span>Membership ID: XXXX</span>
-                          </div>-->
-                          <div class="certi-date">
-                            <span>January 2019</span>
-                          </div>
-                          <div class="certi-company">
-                            <span></span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- End of Certificate 2 -->
-					
-					<!-- Certificate 3 -->
-                    <div class="col-xs-12 col-sm-6">
-                      <div class="certificate-item clearfix">
-                        <div class="certi-logo">
-                          <img src="img/certs/ECSA.png" alt="logo">
-                        </div>
-                        
-                        <div class="certi-content">
-                          <div class="certi-title">
-                            <h4>EC-Council Certified Security Analyst (ECSA)</h4>
-                          </div>
-                          <!--<div class="certi-id">
-                            <span>Membership ID: XXXX</span>
-                          </div>-->
-                          <div class="certi-date">
-                            <span>January 2019</span>
-                          </div>
-                          <div class="certi-company">
-                            <span></span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- End of Certificate 3 -->
-					
-					<!-- Certificate 4 -->
-                    <div class="col-xs-12 col-sm-6">
-                      <div class="certificate-item clearfix">
-                        <div class="certi-logo">
-                          <img src="img/certs/CEH.png" alt="logo">
-                        </div>
-                        
-                        <div class="certi-content">
-                          <div class="certi-title">
-                            <h4>EC-Council Certified Ethical Hacker (CEH)</h4>
-                          </div>
-                          <!--<div class="certi-id">
-                            <span>Membership ID: XXXX</span>
-                          </div>-->
-                          <div class="certi-date">
-                            <span>July 2016</span>
-                          </div>
-                          <div class="certi-company">
-                            <span></span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- End of Certificate 4 -->
-					
-					<!-- Certificate 5 -->
-                    <div class="col-xs-12 col-sm-6">
-                      <div class="certificate-item clearfix">
-                        <div class="certi-logo">
-                          <img src="img/certs/ECC-CTIA.png" alt="logo">
-                        </div>
-                        
-                        <div class="certi-content">
-                          <div class="certi-title">
-                            <h4>EC-Council Certified Threat Intelligence Analyst (CTIA)</h4>
-                          </div>
-                          <!--<div class="certi-id">
-                            <span>Membership ID: XXXX</span>
-                          </div>-->
-                          <div class="certi-date">
-                            <span>December 2018</span>
-                          </div>
-                          <div class="certi-company">
-                            <span></span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- End of Certificate 5 -->
-					
-					<!-- Certificate 6 -->
-                    <div class="col-xs-12 col-sm-6">
-                      <div class="certificate-item clearfix">
-                        <div class="certi-logo">
-                          <img src="img/certs/CASENET.png" alt="logo">
-                        </div>
-                        
-                        <div class="certi-content">
-                          <div class="certi-title">
-                            <h4>Certified Application Security Engineer (CASE .NET)</h4>
-                          </div>
-                          <!--<div class="certi-id">
-                            <span>Membership ID: XXXX</span>
-                          </div>-->
-                          <div class="certi-date">
-                            <span>September 2019</span>
-                          </div>
-                          <div class="certi-company">
-                            <span></span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- End of Certificate 6 -->
-					
-					<!-- Certificate 7 -->
-                    <div class="col-xs-12 col-sm-6">
-                      <div class="certificate-item clearfix">
-                        <div class="certi-logo">
-                          <img src="img/certs/AZ-900.png" alt="logo">
-                        </div>
-                        
-                        <div class="certi-content">
-                          <div class="certi-title">
-                            <h4>Microsoft Certified: Azure Fundamentals (AZ-900)</h4>
-                          </div>
-                          <!--<div class="certi-id">
-                            <span>Membership ID: XXXX</span>
-                          </div>-->
-                          <div class="certi-date">
-                            <span>January 2021</span>
-                          </div>
-                          <div class="certi-company">
-                            <span></span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- End of Certificate 7 -->
-
-                  </div>
-                  <!-- End of Certificates -->
-                </div>
-              </section>
-              <!-- End of Resume Subpage -->
-
-
-              <!-- Blog Subpage -->
-              <section data-id="blog" class="animated-section">
-                <div class="section-content">  
-                  <div class="page-title">
-                    <h2>Blog</h2>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-xs-12 col-sm-12">
-                      <div class="blog-masonry two-columns clearfix">
-                        
-                        <H1>COMING SOON !</H1>
-						
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-
-              </section>
-              <!-- End of Blog Subpage -->
-
-              <!-- Contact Subpage -->
-              <section data-id="contact" class="animated-section">
-                <div class="section-content">  
-                  <div class="page-title">
-                    <h2>Contact</h2>
-                  </div>
-
-                  <div class="row">
-                    <!-- Contact Info -->
-                    <div class="col-xs-12 col-sm-4">
-                      <div class="lm-info-block gray-default">
-                        <i class="lnr lnr-map-marker"></i>
-                        <h4>Mumbai, India</h4>
-                        <span class="lm-info-block-value"></span>
-                        <span class="lm-info-block-text"></span>
-                      </div>
-
-                      <div class="lm-info-block gray-default">
-                        <i class="lnr lnr-phone-handset"></i>
-                        <h4>+91 99XX 9XX YYY</h4>
-                        <span class="lm-info-block-value"></span>
-                        <span class="lm-info-block-text"></span>
-                      </div>
-
-                      <div class="lm-info-block gray-default">
-                        <i class="lnr lnr-envelope"></i>
-                        <h4>XYZ@XYZ.COM</h4>
-                        <span class="lm-info-block-value"></span>
-                        <span class="lm-info-block-text"></span>
-                      </div>
-
-                      <!--<div class="lm-info-block gray-default">
-                        <i class="lnr lnr-checkmark-circle"></i>
-                        <h4>.</h4>
-                        <span class="lm-info-block-value"></span>
-                        <span class="lm-info-block-text"></span>
-                      </div>-->
-
-
-                    </div>
-                    <!-- End of Contact Info -->
-
-                    <!-- Contact Form -->
-                    <!--<div class="col-xs-12 col-sm-8">
-                    <div id="map" class="map"></div>
-                      <div class="block-title">
-                        <h3>How Can I <span>Help You?</span></h3>
-                      </div>
-
-                      <form id="contact_form" class="contact-form" action="contact_form/contact_form.php" method="post">
-
-                        <div class="messages"></div>
-
-                        <div class="controls two-columns">
-                          <div class="fields clearfix">
-                            <div class="left-column">
-                              <div class="form-group form-group-with-icon">
-                                <input id="form_name" type="text" name="name" class="form-control" placeholder="" required="required" data-error="Name is required.">
-                                <label>Full Name</label>
-                                <div class="form-control-border"></div>
-                                <div class="help-block with-errors"></div>
-                              </div>
-
-                              <div class="form-group form-group-with-icon">
-                                <input id="form_email" type="email" name="email" class="form-control" placeholder="" required="required" data-error="Valid email is required.">
-                                <label>Email Address</label>
-                                <div class="form-control-border"></div>
-                                <div class="help-block with-errors"></div>
-                              </div>
-
-                              <div class="form-group form-group-with-icon">
-                                <input id="form_subject" type="text" name="subject" class="form-control" placeholder="" required="required" data-error="Subject is required.">
-                                <label>Subject</label>
-                                <div class="form-control-border"></div>
-                                <div class="help-block with-errors"></div>
-                              </div>
-                            </div>
-                            <div class="right-column">
-                              <div class="form-group form-group-with-icon">
-                                <textarea id="form_message" name="message" class="form-control" placeholder="" rows="7" required="required" data-error="Please, leave me a message."></textarea>
-                                <label>Message</label>
-                                <div class="form-control-border"></div>
-                                <div class="help-block with-errors"></div>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="g-recaptcha" data-sitekey="6LdqmCAUAAAAAMMNEZvn6g4W5e0or2sZmAVpxVqI" data-theme="dark"></div>
-      
-                          <input type="submit" class="button btn-send" value="Send message">
-                        </div>
-                      </form>
-                    </div> -->
-                    <!-- End of Contact Form -->
-                  </div>
-
-                </div>
-              </section>
-              <!-- End of Contact Subpage -->
+    <!-- Pillars -->
+    <div class="pillars" style="margin-top:48px;">
+      <div class="pillar card reveal d1">
+        <div class="pillar-icon" style="background:rgba(255,59,92,.1);border:1px solid rgba(255,59,92,.25)">🌐</div>
+        <div><div class="pillar-title">Web &amp; API Security — OWASP Top 10 &amp; API Top 10</div><div class="pillar-desc">Comprehensive assessments covering SQLi, XSS, SSRF, IDOR, Broken Auth, Business Logic Flaws, BOLA, Mass Assignment, GraphQL attacks, and JWT exploitation across 100+ enterprise web apps and APIs.</div></div>
+      </div>
+      <div class="pillar card reveal d2">
+        <div class="pillar-icon" style="background:rgba(0,255,157,.1);border:1px solid rgba(0,255,157,.25)">📱</div>
+        <div><div class="pillar-title">Mobile &amp; Thick-Client Security — OWASP MASVS</div><div class="pillar-desc">Android APK reverse engineering, SSL pinning bypass, insecure data storage analysis, exported component abuse — 30+ mobile apps tested at KPMG alone. Expert in Frida, Objection, and MobSF.</div></div>
+      </div>
+      <div class="pillar card reveal d3">
+        <div class="pillar-icon" style="background:rgba(0,212,255,.1);border:1px solid rgba(0,212,255,.25)">⚙️</div>
+        <div><div class="pillar-title">DevSecOps &amp; Product Security</div><div class="pillar-desc">SAST, DAST, SCA, and secret scanning integrated into GitLab &amp; Jenkins pipelines. Built VDP programs, Security Champions, and SecureCodingDojo training reducing vulnerabilities by 30–60%.</div></div>
+      </div>
+      <div class="pillar card reveal d4">
+        <div class="pillar-icon" style="background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.25)">🤖</div>
+        <div><div class="pillar-title">AI / LLM Security — OWASP Top 10 for LLMs</div><div class="pillar-desc">Hands-on assessments of AI-integrated applications. Identified and reported Prompt Injection, Insecure Output Handling, Sensitive Data Exposure, and Model Denial of Service vulnerabilities.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════════════════════════════════════════
+     SKILLS
+════════════════════════════════════════════════════════ -->
+<section id="skills" class="sec sec-alt" id="skills-section">
+  <div class="wrap">
+    <div class="sec-label reveal"><span>02 / SKILLS &amp; TOOLS</span></div>
+    <h2 class="disp reveal" style="font-size:clamp(2.2rem,4.5vw,3.4rem);color:var(--bright);line-height:1;margin-bottom:14px;">
+      THE <span class="g-cyan">ARSENAL</span>
+    </h2>
+    <p class="reveal" style="color:var(--mid);font-size:.95rem;margin-bottom:44px;">
+      Full-spectrum coverage — Web · API · Mobile · Thick-Client · Cloud · AI/LLM
+    </p>
+
+    <div class="skills-grid" id="skills-grid">
+
+      <div class="skill-group card reveal d1">
+        <div class="sg-header">
+          <div class="sg-icon" style="background:rgba(255,59,92,.1);border:1px solid rgba(255,59,92,.25);">🌐</div>
+          <div><div class="sg-title">Web App Security</div><div class="sg-sub" style="color:var(--red);">OWASP Top 10</div></div>
+        </div>
+        <div class="sg-tags">
+          <span class="sg-tag" style="border:1px solid rgba(255,59,92,.22);background:rgba(255,59,92,.06);color:#ff8fa0;">SQLi</span>
+          <span class="sg-tag" style="border:1px solid rgba(255,59,92,.22);background:rgba(255,59,92,.06);color:#ff8fa0;">XSS (Stored/Reflected/DOM)</span>
+          <span class="sg-tag" style="border:1px solid rgba(255,59,92,.22);background:rgba(255,59,92,.06);color:#ff8fa0;">CSRF</span>
+          <span class="sg-tag" style="border:1px solid rgba(255,59,92,.22);background:rgba(255,59,92,.06);color:#ff8fa0;">SSRF</span>
+          <span class="sg-tag" style="border:1px solid rgba(255,59,92,.22);background:rgba(255,59,92,.06);color:#ff8fa0;">XXE</span>
+          <span class="sg-tag" style="border:1px solid rgba(255,59,92,.22);background:rgba(255,59,92,.06);color:#ff8fa0;">IDOR</span>
+          <span class="sg-tag" style="border:1px solid rgba(255,59,92,.22);background:rgba(255,59,92,.06);color:#ff8fa0;">Broken Auth</span>
+          <span class="sg-tag" style="border:1px solid rgba(255,59,92,.22);background:rgba(255,59,92,.06);color:#ff8fa0;">Business Logic Flaws</span>
+          <span class="sg-tag" style="border:1px solid rgba(255,59,92,.22);background:rgba(255,59,92,.06);color:#ff8fa0;">SSTI</span>
+          <span class="sg-tag" style="border:1px solid rgba(255,59,92,.22);background:rgba(255,59,92,.06);color:#ff8fa0;">Deserialization</span>
+        </div>
+      </div>
+
+      <div class="skill-group card reveal d2">
+        <div class="sg-header">
+          <div class="sg-icon" style="background:rgba(0,212,255,.1);border:1px solid rgba(0,212,255,.25);">🔌</div>
+          <div><div class="sg-title">API Security</div><div class="sg-sub" style="color:var(--cyan);">OWASP API Top 10</div></div>
+        </div>
+        <div class="sg-tags">
+          <span class="sg-tag" style="border:1px solid rgba(0,212,255,.22);background:rgba(0,212,255,.06);color:#7de8ff;">BOLA / IDOR</span>
+          <span class="sg-tag" style="border:1px solid rgba(0,212,255,.22);background:rgba(0,212,255,.06);color:#7de8ff;">Broken Function Auth</span>
+          <span class="sg-tag" style="border:1px solid rgba(0,212,255,.22);background:rgba(0,212,255,.06);color:#7de8ff;">Excessive Data Exposure</span>
+          <span class="sg-tag" style="border:1px solid rgba(0,212,255,.22);background:rgba(0,212,255,.06);color:#7de8ff;">Mass Assignment</span>
+          <span class="sg-tag" style="border:1px solid rgba(0,212,255,.22);background:rgba(0,212,255,.06);color:#7de8ff;">Rate Limit Bypass</span>
+          <span class="sg-tag" style="border:1px solid rgba(0,212,255,.22);background:rgba(0,212,255,.06);color:#7de8ff;">GraphQL Attacks</span>
+          <span class="sg-tag" style="border:1px solid rgba(0,212,255,.22);background:rgba(0,212,255,.06);color:#7de8ff;">JWT Attacks</span>
+          <span class="sg-tag" style="border:1px solid rgba(0,212,255,.22);background:rgba(0,212,255,.06);color:#7de8ff;">Postman</span>
+        </div>
+      </div>
+
+      <div class="skill-group card reveal d3">
+        <div class="sg-header">
+          <div class="sg-icon" style="background:rgba(0,255,157,.1);border:1px solid rgba(0,255,157,.25);">📱</div>
+          <div><div class="sg-title">Mobile Security</div><div class="sg-sub" style="color:var(--green);">Android · OWASP MASVS</div></div>
+        </div>
+        <div class="sg-tags">
+          <span class="sg-tag" style="border:1px solid rgba(0,255,157,.22);background:rgba(0,255,157,.06);color:#7dffca;">APK Reverse Engineering</span>
+          <span class="sg-tag" style="border:1px solid rgba(0,255,157,.22);background:rgba(0,255,157,.06);color:#7dffca;">SSL Pinning Bypass</span>
+          <span class="sg-tag" style="border:1px solid rgba(0,255,157,.22);background:rgba(0,255,157,.06);color:#7dffca;">Insecure Data Storage</span>
+          <span class="sg-tag" style="border:1px solid rgba(0,255,157,.22);background:rgba(0,255,157,.06);color:#7dffca;">Exported Components</span>
+          <span class="sg-tag" style="border:1px solid rgba(0,255,157,.22);background:rgba(0,255,157,.06);color:#7dffca;">Frida / Objection</span>
+          <span class="sg-tag" style="border:1px solid rgba(0,255,157,.22);background:rgba(0,255,157,.06);color:#7dffca;">MobSF</span>
+          <span class="sg-tag" style="border:1px solid rgba(0,255,157,.22);background:rgba(0,255,157,.06);color:#7dffca;">Dynamic Analysis</span>
+        </div>
+      </div>
+
+      <div class="skill-group card reveal d1">
+        <div class="sg-header">
+          <div class="sg-icon" style="background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.25);">🤖</div>
+          <div><div class="sg-title">AI / LLM Security</div><div class="sg-sub" style="color:var(--gold);">OWASP LLM Top 10</div></div>
+        </div>
+        <div class="sg-tags">
+          <span class="sg-tag" style="border:1px solid rgba(201,168,76,.25);background:rgba(201,168,76,.07);color:#e8c97a;">Prompt Injection</span>
+          <span class="sg-tag" style="border:1px solid rgba(201,168,76,.25);background:rgba(201,168,76,.07);color:#e8c97a;">Insecure Output Handling</span>
+          <span class="sg-tag" style="border:1px solid rgba(201,168,76,.25);background:rgba(201,168,76,.07);color:#e8c97a;">Sensitive Data Exposure</span>
+          <span class="sg-tag" style="border:1px solid rgba(201,168,76,.25);background:rgba(201,168,76,.07);color:#e8c97a;">Model DoS</span>
+          <span class="sg-tag" style="border:1px solid rgba(201,168,76,.25);background:rgba(201,168,76,.07);color:#e8c97a;">AI App Assessments</span>
+        </div>
+      </div>
+
+      <div class="skill-group card reveal d2">
+        <div class="sg-header">
+          <div class="sg-icon" style="background:rgba(188,140,255,.1);border:1px solid rgba(188,140,255,.25);">⚙️</div>
+          <div><div class="sg-title">DevSecOps &amp; Pipeline</div><div class="sg-sub" style="color:#BC8CFF;">SAST · DAST · SCA · Secrets</div></div>
+        </div>
+        <div class="sg-tags">
+          <span class="sg-tag" style="border:1px solid rgba(188,140,255,.22);background:rgba(188,140,255,.06);color:#d4b0ff;">GitLab CI/CD</span>
+          <span class="sg-tag" style="border:1px solid rgba(188,140,255,.22);background:rgba(188,140,255,.06);color:#d4b0ff;">Jenkins</span>
+          <span class="sg-tag" style="border:1px solid rgba(188,140,255,.22);background:rgba(188,140,255,.06);color:#d4b0ff;">Snyk</span>
+          <span class="sg-tag" style="border:1px solid rgba(188,140,255,.22);background:rgba(188,140,255,.06);color:#d4b0ff;">Veracode</span>
+          <span class="sg-tag" style="border:1px solid rgba(188,140,255,.22);background:rgba(188,140,255,.06);color:#d4b0ff;">HCL AppScan</span>
+          <span class="sg-tag" style="border:1px solid rgba(188,140,255,.22);background:rgba(188,140,255,.06);color:#d4b0ff;">Invicti</span>
+          <span class="sg-tag" style="border:1px solid rgba(188,140,255,.22);background:rgba(188,140,255,.06);color:#d4b0ff;">TruffleHog</span>
+          <span class="sg-tag" style="border:1px solid rgba(188,140,255,.22);background:rgba(188,140,255,.06);color:#d4b0ff;">OWASP ZAP</span>
+          <span class="sg-tag" style="border:1px solid rgba(188,140,255,.22);background:rgba(188,140,255,.06);color:#d4b0ff;">Wiz</span>
+          <span class="sg-tag" style="border:1px solid rgba(188,140,255,.22);background:rgba(188,140,255,.06);color:#d4b0ff;">Trivy</span>
+        </div>
+      </div>
+
+      <div class="skill-group card reveal d3">
+        <div class="sg-header">
+          <div class="sg-icon" style="background:rgba(88,166,255,.1);border:1px solid rgba(88,166,255,.25);">☁️</div>
+          <div><div class="sg-title">Cloud &amp; Infrastructure</div><div class="sg-sub" style="color:#58A6FF;">AWS · Azure · Containers</div></div>
+        </div>
+        <div class="sg-tags">
+          <span class="sg-tag" style="border:1px solid rgba(88,166,255,.22);background:rgba(88,166,255,.06);color:#a0c8ff;">AWS Security (Dome9/GSL)</span>
+          <span class="sg-tag" style="border:1px solid rgba(88,166,255,.22);background:rgba(88,166,255,.06);color:#a0c8ff;">Azure Red Team</span>
+          <span class="sg-tag" style="border:1px solid rgba(88,166,255,.22);background:rgba(88,166,255,.06);color:#a0c8ff;">Container Security</span>
+          <span class="sg-tag" style="border:1px solid rgba(88,166,255,.22);background:rgba(88,166,255,.06);color:#a0c8ff;">IaC Scanning</span>
+          <span class="sg-tag" style="border:1px solid rgba(88,166,255,.22);background:rgba(88,166,255,.06);color:#a0c8ff;">Tenable</span>
+          <span class="sg-tag" style="border:1px solid rgba(88,166,255,.22);background:rgba(88,166,255,.06);color:#a0c8ff;">MBSS Baselines</span>
+        </div>
+      </div>
+
+      <div class="skill-group card reveal d1">
+        <div class="sg-header">
+          <div class="sg-icon" style="background:rgba(255,123,84,.1);border:1px solid rgba(255,123,84,.25);">⚔️</div>
+          <div><div class="sg-title">Offensive Tools</div><div class="sg-sub" style="color:#FF7B54;">Pentest Arsenal</div></div>
+        </div>
+        <div class="sg-tags">
+          <span class="sg-tag" style="border:1px solid rgba(255,123,84,.22);background:rgba(255,123,84,.06);color:#ffa07a;">Burp Suite Pro</span>
+          <span class="sg-tag" style="border:1px solid rgba(255,123,84,.22);background:rgba(255,123,84,.06);color:#ffa07a;">Metasploit</span>
+          <span class="sg-tag" style="border:1px solid rgba(255,123,84,.22);background:rgba(255,123,84,.06);color:#ffa07a;">Kali Linux</span>
+          <span class="sg-tag" style="border:1px solid rgba(255,123,84,.22);background:rgba(255,123,84,.06);color:#ffa07a;">nmap</span>
+          <span class="sg-tag" style="border:1px solid rgba(255,123,84,.22);background:rgba(255,123,84,.06);color:#ffa07a;">ffuf</span>
+          <span class="sg-tag" style="border:1px solid rgba(255,123,84,.22);background:rgba(255,123,84,.06);color:#ffa07a;">Thick-Client Testing</span>
+          <span class="sg-tag" style="border:1px solid rgba(255,123,84,.22);background:rgba(255,123,84,.06);color:#ffa07a;">Social Engineering</span>
+        </div>
+      </div>
+
+      <div class="skill-group card reveal d2">
+        <div class="sg-header">
+          <div class="sg-icon" style="background:rgba(0,255,157,.1);border:1px solid rgba(0,255,157,.25);">🛡️</div>
+          <div><div class="sg-title">Frameworks &amp; Programs</div><div class="sg-sub" style="color:var(--green);">Governance · Culture</div></div>
+        </div>
+        <div class="sg-tags">
+          <span class="sg-tag">OWASP Top 10</span>
+          <span class="sg-tag">OWASP API Top 10</span>
+          <span class="sg-tag">OWASP MASVS</span>
+          <span class="sg-tag">OWASP LLM Top 10</span>
+          <span class="sg-tag">PTES</span>
+          <span class="sg-tag">SSDLC</span>
+          <span class="sg-tag">NCA Compliance</span>
+          <span class="sg-tag">NIST</span>
+          <span class="sg-tag">CVSS</span>
+          <span class="sg-tag">Security Champions</span>
+          <span class="sg-tag">VDP Management</span>
+          <span class="sg-tag">Threat Modeling</span>
+        </div>
+      </div>
+
+    </div><!-- /.skills-grid -->
+
+    <!-- Proficiency bars -->
+    <div class="prof-card card reveal" id="prof-card">
+      <div class="prof-title">$ top_skills --ranked --verbose</div>
+      <div class="prof-row"><div class="prof-meta"><span class="prof-name">Web &amp; API Penetration Testing</span><span class="prof-pct">97%</span></div><div class="sbar"><div class="sbar-fill" style="width:97%"></div></div></div>
+      <div class="prof-row"><div class="prof-meta"><span class="prof-name">Security Program Leadership</span><span class="prof-pct">93%</span></div><div class="sbar"><div class="sbar-fill" style="width:93%"></div></div></div>
+      <div class="prof-row"><div class="prof-meta"><span class="prof-name">DevSecOps / SAST-DAST-SCA Integration</span><span class="prof-pct">92%</span></div><div class="sbar"><div class="sbar-fill" style="width:92%"></div></div></div>
+      <div class="prof-row"><div class="prof-meta"><span class="prof-name">Threat Modeling &amp; Risk Assessment</span><span class="prof-pct">90%</span></div><div class="sbar"><div class="sbar-fill" style="width:90%"></div></div></div>
+      <div class="prof-row"><div class="prof-meta"><span class="prof-name">Mobile Application Security (Android)</span><span class="prof-pct">88%</span></div><div class="sbar"><div class="sbar-fill" style="width:88%"></div></div></div>
+      <div class="prof-row"><div class="prof-meta"><span class="prof-name">AI / LLM Security</span><span class="prof-pct">85%</span></div><div class="sbar"><div class="sbar-fill" style="width:85%"></div></div></div>
+      <div class="prof-row"><div class="prof-meta"><span class="prof-name">Cloud Security (AWS / Azure)</span><span class="prof-pct">82%</span></div><div class="sbar"><div class="sbar-fill" style="width:82%"></div></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════════════════════════════════════════
+     EXPERIENCE
+════════════════════════════════════════════════════════ -->
+<section id="experience" class="sec">
+  <div class="wrap">
+    <div class="sec-label reveal"><span>03 / EXPERIENCE</span></div>
+    <h2 class="disp reveal" style="font-size:clamp(2.2rem,4.5vw,3.4rem);color:var(--bright);line-height:1;margin-bottom:48px;">
+      BATTLE-TESTED<br><span class="g-cyan">ACROSS INDUSTRIES</span>
+    </h2>
+
+    <div class="exp-list">
+
+      <!-- Job 1 -->
+      <div class="exp-card card reveal" style="border-left-color:var(--cyan);">
+        <div class="exp-top">
+          <div>
+            <div class="exp-role">Sr. Software QA Engineer (Security Testing)</div>
+            <div class="exp-meta">
+              <span class="exp-co" style="color:var(--cyan);">Flint International</span>
+              <span class="exp-dot">·</span>
+              <span class="exp-loc">→ SITE / NCA</span>
+              <span class="exp-dot">·</span>
+              <span class="exp-loc">Riyadh, Saudi Arabia</span>
             </div>
           </div>
+          <div style="display:flex;flex-direction:column;align-items:flex-end;gap:5px;">
+            <span class="tenure active">Jan 2026 — Present</span>
+            <span class="active-badge"><span style="width:6px;height:6px;border-radius:50%;background:var(--green);display:inline-block;animation:blink 2s infinite;"></span>ACTIVE</span>
+          </div>
+        </div>
+        <ul class="exp-bullets">
+          <li><span class="bullet-arrow" style="color:var(--cyan);">▸</span><span>Securing business-critical applications for major PIF-backed entities in Saudi Arabia</span></li>
+          <li><span class="bullet-arrow" style="color:var(--cyan);">▸</span><span>Defined &amp; implemented AppSec KPIs measuring testing effectiveness, coverage, and program maturity</span></li>
+          <li><span class="bullet-arrow" style="color:var(--cyan);">▸</span><span>Rigorous manual &amp; automated security testing — specializing in business logic vulnerabilities and injection-based attacks</span></li>
+          <li><span class="bullet-arrow" style="color:var(--cyan);">▸</span><span>Orchestrated SAST, SCA &amp; secret scanning within GitLab CI/CD pipelines for continuous security coverage</span></li>
+          <li><span class="bullet-arrow" style="color:var(--cyan);">▸</span><span>Reduced ecosystem vulnerability count by <strong style="color:var(--bright)">60%</strong> via GitLab Advanced Security triage and validation</span></li>
+          <li><span class="bullet-arrow" style="color:var(--cyan);">▸</span><span>Administered DAST scans across environments; deep-dive analysis to systematically eliminate false positives</span></li>
+        </ul>
+        <div class="tags-row"><span class="tag">SAST</span><span class="tag">SCA</span><span class="tag">GitLab CI/CD</span><span class="tag">Business Logic</span><span class="tag">DAST</span><span class="tag">NCA Compliance</span><span class="tag">Jira</span></div>
+      </div>
 
+      <!-- Job 2 -->
+      <div class="exp-card card reveal" style="border-left-color:var(--gold);">
+        <div class="exp-top">
+          <div>
+            <div class="exp-role">Principal Product Security Engineer</div>
+            <div class="exp-meta">
+              <span class="exp-co" style="color:var(--gold);">ConnectWise LLP</span>
+              <span class="exp-dot">·</span>
+              <span class="exp-loc">Mumbai, India</span>
+            </div>
+          </div>
+          <span class="tenure">Oct 2022 — Dec 2025</span>
+        </div>
+        <ul class="exp-bullets">
+          <li><span class="bullet-arrow" style="color:var(--gold);">▸</span><span>Led product security team — manual pentest of Web, API, Mobile &amp; Thick-Client applications (OWASP Top 10 / API Top 10)</span></li>
+          <li><span class="bullet-arrow" style="color:var(--gold);">▸</span><span>Implemented SecureCodingDojo platform; developer training resulted in <strong style="color:var(--bright)">30% reduction</strong> in reported security vulnerabilities</span></li>
+          <li><span class="bullet-arrow" style="color:var(--gold);">▸</span><span>Managed corporate Vulnerability Disclosure Program (VDP) — triaging and prioritizing external researcher reports</span></li>
+          <li><span class="bullet-arrow" style="color:var(--gold);">▸</span><span>Built company-wide Security Champions program embedding security into SDLC from the design phase</span></li>
+          <li><span class="bullet-arrow" style="color:var(--gold);">▸</span><span>Integrated Snyk into GitLab &amp; Jenkins for SCA, SAST, Container, and IaC scanning with automated developer notifications</span></li>
+          <li><span class="bullet-arrow" style="color:var(--gold);">▸</span><span>Assessed AI-integrated apps using OWASP Top 10 for LLMs — identified Prompt Injection, Insecure Output Handling &amp; Sensitive Data Exposure</span></li>
+          <li><span class="bullet-arrow" style="color:var(--gold);">▸</span><span>Conducted internal CTF events, phishing simulations &amp; security awareness training across the organization</span></li>
+        </ul>
+        <div class="tags-row"><span class="tag">Web Pentest</span><span class="tag">API Top 10</span><span class="tag">LLM Security</span><span class="tag">VDP</span><span class="tag">Snyk</span><span class="tag">Security Champions</span><span class="tag">PTES</span><span class="tag">CTF</span></div>
+      </div>
+
+      <!-- Job 3 -->
+      <div class="exp-card card reveal" style="border-left-color:#BC8CFF;">
+        <div class="exp-top">
+          <div>
+            <div class="exp-role">Technology Security Associate Manager</div>
+            <div class="exp-meta">
+              <span class="exp-co" style="color:#BC8CFF;">Accenture</span>
+              <span class="exp-dot">·</span>
+              <span class="exp-loc">Mumbai, India</span>
+            </div>
+          </div>
+          <span class="tenure">Jul 2021 — Oct 2022</span>
+        </div>
+        <ul class="exp-bullets">
+          <li><span class="bullet-arrow" style="color:#BC8CFF;">▸</span><span>Led one of the largest security assessment programs — <strong style="color:var(--bright)">100+ applications</strong> across SAST, DAST, SCA, and Penetration Testing with full DevSecOps integration</span></li>
+          <li><span class="bullet-arrow" style="color:#BC8CFF;">▸</span><span>Managed team of 4 security engineers ensuring quality-driven outcomes and timely remediation</span></li>
+          <li><span class="bullet-arrow" style="color:#BC8CFF;">▸</span><span>Developed MBSS Baselines for Network Devices, Windows, Linux, Docker, and Containers</span></li>
+          <li><span class="bullet-arrow" style="color:#BC8CFF;">▸</span><span>Established Secure SDLC practices and embedded DevSecOps culture in client environments</span></li>
+          <li><span class="bullet-arrow" style="color:#BC8CFF;">▸</span><span>Created vulnerable-machine lab for internal CTF events; led RFP responses and security proposal costing</span></li>
+        </ul>
+        <div class="tags-row"><span class="tag">DevSecOps</span><span class="tag">SAST/DAST/SCA</span><span class="tag">MBSS Baselines</span><span class="tag">Team Lead</span><span class="tag">SSDLC</span><span class="tag">CTF Lab</span></div>
+      </div>
+
+      <!-- Job 4 -->
+      <div class="exp-card card reveal" style="border-left-color:var(--red);">
+        <div class="exp-top">
+          <div>
+            <div class="exp-role">Manager – Application Security</div>
+            <div class="exp-meta">
+              <span class="exp-co" style="color:var(--red);">KPMG</span>
+              <span class="exp-dot">·</span>
+              <span class="exp-loc">Mumbai, India</span>
+            </div>
+          </div>
+          <span class="tenure">Jan 2020 — Jul 2021</span>
+        </div>
+        <div class="award-pill">🏆 ENCORE Rising Star Award — Q1 April–June 2020</div>
+        <ul class="exp-bullets">
+          <li><span class="bullet-arrow" style="color:var(--red);">▸</span><span>Delivered engagements across Middle East, Canada &amp; USA — Banking, Telecom, Retail &amp; Pharma clients</span></li>
+          <li><span class="bullet-arrow" style="color:var(--red);">▸</span><span>Penetration tested <strong style="color:var(--bright)">100+ web applications</strong> and <strong style="color:var(--bright)">30+ Android mobile apps</strong> (OWASP Top 10 / OWASP MASVS)</span></li>
+          <li><span class="bullet-arrow" style="color:var(--red);">▸</span><span>Conducted VAPT on <strong style="color:var(--bright)">600+ IPs</strong> across diverse client environments</span></li>
+          <li><span class="bullet-arrow" style="color:var(--red);">▸</span><span>Developed MBSS Baselines for Network devices, Windows, Linux, Docker &amp; Containers</span></li>
+          <li><span class="bullet-arrow" style="color:var(--red);">▸</span><span>Delivered comprehensive client reports with CVSS risk ratings to executive stakeholders</span></li>
+        </ul>
+        <div class="tags-row"><span class="tag">Web Pentest</span><span class="tag">Android · MASVS</span><span class="tag">OWASP API Top 10</span><span class="tag">VAPT 600+ IPs</span><span class="tag">CVSS</span><span class="tag">Multi-geo Delivery</span></div>
+      </div>
+
+      <!-- Job 5 -->
+      <div class="exp-card card reveal" style="border-left-color:var(--green);">
+        <div class="exp-top">
+          <div>
+            <div class="exp-role">Application Security Engineer</div>
+            <div class="exp-meta">
+              <span class="exp-co" style="color:var(--green);">Cornerstone OnDemand</span>
+              <span class="exp-dot">·</span>
+              <span class="exp-loc">Mumbai, India</span>
+            </div>
+          </div>
+          <span class="tenure">Jun 2019 — Jan 2020</span>
+        </div>
+        <ul class="exp-bullets">
+          <li><span class="bullet-arrow" style="color:var(--green);">▸</span><span>Penetration tested Web, Thick-Client &amp; Mobile applications prior to quarterly releases</span></li>
+          <li><span class="bullet-arrow" style="color:var(--green);">▸</span><span>Integrated automated DAST scanning via Burp Suite + Selenium + Postman + Jenkins into CI/CD pipeline</span></li>
+          <li><span class="bullet-arrow" style="color:var(--green);">▸</span><span>Implemented Snyk for SCA; developed Dome9 GSL rules for continuous AWS cloud security posture monitoring</span></li>
+          <li><span class="bullet-arrow" style="color:var(--green);">▸</span><span>Designed and executed phishing &amp; vishing campaigns for multiple industry clients</span></li>
+        </ul>
+        <div class="tags-row"><span class="tag">CI/CD DAST</span><span class="tag">Thick-Client</span><span class="tag">AWS · Dome9</span><span class="tag">Snyk</span><span class="tag">Social Engineering</span></div>
+      </div>
+
+      <!-- Job 6 -->
+      <div class="exp-card card reveal" style="border-left-color:var(--muted);">
+        <div class="exp-top">
+          <div>
+            <div class="exp-role">Principal Quality Engineer</div>
+            <div class="exp-meta">
+              <span class="exp-co" style="color:var(--mid);">Continuum Managed Solutions Pvt. Ltd.</span>
+              <span class="exp-dot">·</span>
+              <span class="exp-loc">Mumbai, India</span>
+            </div>
+          </div>
+          <span class="tenure">Jan 2011 — May 2019</span>
+        </div>
+        <ul class="exp-bullets">
+          <li><span class="bullet-arrow" style="color:var(--mid);">▸</span><span>8 years QA engineering; collaborated with InfoSec team for web app vulnerability assessments (XSS, SQLi, Broken Auth)</span></li>
+          <li><span class="bullet-arrow" style="color:var(--mid);">▸</span><span>Managed QA team of 5; led test strategy, test plans, and environment validation across multiple product lines</span></li>
+          <li><span class="bullet-arrow" style="color:var(--mid);">▸</span><span>Managed test cases in TestRail; analysis reporting in Jira/Confluence; delivered automated test scripts</span></li>
+        </ul>
+        <div class="tags-row"><span class="tag">QA Engineering</span><span class="tag">XSS · SQLi</span><span class="tag">TestRail</span><span class="tag">Jira</span><span class="tag">CI/CD</span><span class="tag">Automation</span></div>
+      </div>
+
+    </div><!-- /.exp-list -->
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════════════════════════════════════════
+     CERTIFICATIONS
+════════════════════════════════════════════════════════ -->
+<section id="certifications" class="sec sec-alt">
+  <div class="wrap">
+    <div class="sec-label reveal"><span>04 / CERTIFICATIONS &amp; AWARDS</span></div>
+    <h2 class="disp reveal" style="font-size:clamp(2.2rem,4.5vw,3.4rem);color:var(--bright);line-height:1;margin-bottom:48px;">
+      CREDENTIALS &amp; <span class="g-gold">RECOGNITION</span>
+    </h2>
+
+    <div class="certs-grid">
+
+      <div class="cert-card card reveal d1">
+        <div class="cert-top">
+          <img src="img/certs/CARTP.jpg" alt="CRTE" class="cert-logo" />
+          <span class="cert-year">2023</span>
+        </div>
+        <div class="cert-abbr-pill" style="background:rgba(255,59,92,.12);color:var(--red);border:1px solid rgba(255,59,92,.3);">CRTE</div>
+        <div class="cert-name">Certified Red Team Expert</div>
+        <div class="cert-issuer" style="color:var(--red);">Altered Security</div>
+        <div class="cert-desc">Advanced AD attacks, lateral movement &amp; persistence in enterprise environments.</div>
+      </div>
+
+      <div class="cert-card card reveal d2">
+        <div class="cert-top">
+          <img src="img/certs/CARTP.jpg" alt="CARTP" class="cert-logo" />
+          <span class="cert-year">2021</span>
+        </div>
+        <div class="cert-abbr-pill" style="background:rgba(88,166,255,.12);color:#58A6FF;border:1px solid rgba(88,166,255,.3);">CARTP</div>
+        <div class="cert-name">Certified Azure Red Team Professional</div>
+        <div class="cert-issuer" style="color:#58A6FF;">Altered Security</div>
+        <div class="cert-desc">Azure attack paths, service principal abuse, and tenant escalation techniques.</div>
+      </div>
+
+      <div class="cert-card card reveal d3">
+        <div class="cert-top">
+          <img src="img/certs/AZ-900.png" alt="AZ-900" class="cert-logo" />
+          <span class="cert-year">2021</span>
+        </div>
+        <div class="cert-abbr-pill" style="background:rgba(0,120,212,.12);color:#0078D4;border:1px solid rgba(0,120,212,.3);">AZ-900</div>
+        <div class="cert-name">Microsoft Certified: Azure Fundamentals</div>
+        <div class="cert-issuer" style="color:#0078D4;">Microsoft</div>
+        <div class="cert-desc">Cloud fundamentals, Azure service architecture and core security concepts.</div>
+      </div>
+
+      <div class="cert-card card reveal d1">
+        <div class="cert-top">
+          <img src="img/certs/CASENET.png" alt="CASE" class="cert-logo" />
+          <span class="cert-year">2019</span>
+        </div>
+        <div class="cert-abbr-pill" style="background:rgba(201,168,76,.12);color:var(--gold);border:1px solid rgba(201,168,76,.3);">CASE .NET</div>
+        <div class="cert-name">Certified Application Security Engineer</div>
+        <div class="cert-issuer" style="color:var(--gold);">EC-Council</div>
+        <div class="cert-desc">Secure coding, threat modeling, and security testing for .NET applications.</div>
+      </div>
+
+      <div class="cert-card card reveal d2">
+        <div class="cert-top">
+          <img src="img/certs/CPSA.png" alt="CPSA" class="cert-logo" />
+          <span class="cert-year">2019</span>
+        </div>
+        <div class="cert-abbr-pill" style="background:rgba(0,212,255,.12);color:var(--cyan);border:1px solid rgba(0,212,255,.3);">CPSA</div>
+        <div class="cert-name">CREST Practitioner Security Analyst</div>
+        <div class="cert-issuer" style="color:var(--cyan);">CREST</div>
+        <div class="cert-desc">UK CREST accredited practitioner-level security analysis and penetration testing.</div>
+      </div>
+
+      <div class="cert-card card reveal d3">
+        <div class="cert-top">
+          <img src="img/certs/ECSA.png" alt="ECSA" class="cert-logo" />
+          <span class="cert-year">2019</span>
+        </div>
+        <div class="cert-abbr-pill" style="background:rgba(0,255,157,.12);color:var(--green);border:1px solid rgba(0,255,157,.3);">ECSA</div>
+        <div class="cert-name">EC-Council Certified Security Analyst</div>
+        <div class="cert-issuer" style="color:var(--green);">EC-Council</div>
+        <div class="cert-desc">Advanced penetration testing concepts, methodologies and reporting.</div>
+      </div>
+
+      <div class="cert-card card reveal d1">
+        <div class="cert-top">
+          <img src="img/certs/ECC-CTIA.png" alt="CTIA" class="cert-logo" />
+          <span class="cert-year">2018</span>
+        </div>
+        <div class="cert-abbr-pill" style="background:rgba(188,140,255,.12);color:#BC8CFF;border:1px solid rgba(188,140,255,.3);">CTIA</div>
+        <div class="cert-name">Certified Threat Intelligence Analyst</div>
+        <div class="cert-issuer" style="color:#BC8CFF;">EC-Council</div>
+        <div class="cert-desc">Threat intelligence lifecycle, IOC analysis, and strategic threat reporting.</div>
+      </div>
+
+      <div class="cert-card card reveal d2">
+        <div class="cert-top">
+          <img src="img/certs/CEH.png" alt="CEH" class="cert-logo" />
+          <span class="cert-year">2017</span>
+        </div>
+        <div class="cert-abbr-pill" style="background:rgba(255,59,92,.12);color:var(--red);border:1px solid rgba(255,59,92,.3);">CEH</div>
+        <div class="cert-name">Certified Ethical Hacker</div>
+        <div class="cert-issuer" style="color:var(--red);">EC-Council</div>
+        <div class="cert-desc">Ethical hacking techniques, tools and methodologies across all attack phases.</div>
+      </div>
+
+      <div class="cert-card card reveal d3">
+        <div class="cert-top">
+          <div style="width:56px;height:56px;border-radius:8px;border:1px solid var(--bdr);background:var(--sur2);display:flex;align-items:center;justify-content:center;font-size:1.4rem;">✅</div>
+          <span class="cert-year">2014</span>
+        </div>
+        <div class="cert-abbr-pill" style="background:rgba(122,144,170,.12);color:var(--mid);border:1px solid rgba(122,144,170,.3);">ISTQB</div>
+        <div class="cert-name">ISTQB Foundation Level</div>
+        <div class="cert-issuer" style="color:var(--mid);">ISTQB</div>
+        <div class="cert-desc">International software testing qualifications board — testing fundamentals.</div>
+      </div>
+
+    </div><!-- /.certs-grid -->
+
+    <!-- Awards -->
+    <div class="card reveal" style="padding:28px 26px;">
+      <div class="mono" style="font-size:.75rem;color:var(--gold);margin-bottom:22px;letter-spacing:.07em;">$ cat awards.txt</div>
+      <div class="awards-grid">
+        <div class="award-card"><span class="award-icon">🏆</span><div><div class="award-title">Employee of the Year</div><div class="award-desc">Best performance in application testing &amp; management</div></div></div>
+        <div class="award-card"><span class="award-icon">🥇</span><div><div class="award-title">Team Maestro Security Award</div><div class="award-desc">Security incident handling excellence</div></div></div>
+        <div class="award-card"><span class="award-icon">⚡</span><div><div class="award-title">Spot Award</div><div class="award-desc">Resolved critical client server issue within 24 hours</div></div></div>
+        <div class="award-card"><span class="award-icon">⭐</span><div><div class="award-title">STAR Performer Award</div><div class="award-desc">Quarterly release performance recognition</div></div></div>
+        <div class="award-card"><span class="award-icon">🌟</span><div><div class="award-title">ENCORE Rising Star Award</div><div class="award-desc">Q1 April–June 2020, KPMG</div></div></div>
       </div>
     </div>
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/modernizr.custom.js"></script>
-    <script src="js/animating.js"></script>
+  </div>
+</section>
 
-    <script src="js/imagesloaded.pkgd.min.js"></script>
-    <script src='https://www.google.com/recaptcha/api.js'></script>
+<div class="divider"></div>
 
-    <script src='js/perfect-scrollbar.min.js'></script>
-    <script src='js/jquery.shuffle.min.js'></script>
-    <script src='js/masonry.pkgd.min.js'></script>
-    <script src='js/owl.carousel.min.js'></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
+<!-- ═══════════════════════════════════════════════════════
+     CONTACT
+════════════════════════════════════════════════════════ -->
+<section id="contact" class="sec">
+  <div class="wrap">
+    <div class="sec-label reveal"><span>05 / CONTACT</span></div>
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrDf32aQTCVENBhFJbMBKOUTiUAABtC2o"></script>
-    <script src="js/jquery.googlemap.js"></script>
-    <script src="js/validator.js"></script>
-    <script src="js/main.js"></script>
-  </body>
+    <div class="contact-grid">
+      <div class="reveal">
+        <h2 class="contact-heading">
+          LET'S BUILD<br><span class="g-cyan">SOMETHING</span><br>SECURE
+        </h2>
+        <p class="contact-para">
+          Looking for a seasoned Application Security Engineer to strengthen your posture? Whether it's a Web or API pentest, Mobile assessment, DevSecOps integration, or building an AppSec program from the ground up — I'd love to connect.
+        </p>
+        <div class="contact-cmd card" style="display:inline-block;padding:14px 20px;">
+          <span class="mono" style="font-size:.82rem;">
+            <span style="color:var(--cyan);">$ </span>
+            <span style="color:var(--mid);">ping bilal --subject </span>
+            <span style="color:var(--gold);">"Let's work together"</span>
+          </span>
+        </div>
+        <div class="contact-info">
+          <div class="contact-info-row"><em>📍 Location:</em> &nbsp;Riyadh, Saudi Arabia</div>
+          <div class="contact-info-row"><em>✅ Availability:</em> &nbsp;Open to engagements and #OpenToWork</div>
+          <div class="contact-info-row"><em>⚡ Response:</em> &nbsp;Within 24 hours</div>
+        </div>
+      </div>
+
+      <div class="contact-links reveal d1">
+        <a href="mailto:khan.bilal88@gmail.com" class="c-link card">
+          <div class="c-link-icon" style="background:rgba(234,67,53,.12);color:#EA4335;border:1px solid rgba(234,67,53,.25);">✉️</div>
+          <div><div class="c-link-label">EMAIL</div><div class="c-link-val">khan.bilal88@gmail.com</div></div>
+          <span class="c-arrow">→</span>
+        </a>
+        <a href="https://linkedin.com/in/bilalkhan88" target="_blank" rel="noopener noreferrer" class="c-link card">
+          <div class="c-link-icon" style="background:rgba(0,119,181,.12);color:#0077B5;border:1px solid rgba(0,119,181,.25);">in</div>
+          <div><div class="c-link-label">LINKEDIN</div><div class="c-link-val">linkedin.com/in/bilalkhan88</div></div>
+          <span class="c-arrow">→</span>
+        </a>
+        <a href="https://github.com/bilalk88" target="_blank" rel="noopener noreferrer" class="c-link card">
+          <div class="c-link-icon" style="background:rgba(237,244,255,.08);color:var(--bright);border:1px solid rgba(237,244,255,.15);">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          </div>
+          <div><div class="c-link-label">GITHUB</div><div class="c-link-val">github.com/bilalk88</div></div>
+          <span class="c-arrow">→</span>
+        </a>
+        <a href="tel:+919920931641" class="c-link card">
+          <div class="c-link-icon" style="background:rgba(201,168,76,.12);color:var(--gold);border:1px solid rgba(201,168,76,.25);">📞</div>
+          <div><div class="c-link-label">PHONE</div><div class="c-link-val">+91 9920 931641</div></div>
+          <span class="c-arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════════════ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-copy"><em>©</em> 2025 Bilal Ahmed Khan · All rights reserved</div>
+    <div class="footer-built">Built with <em>HTML</em> · <em>CSS</em> · <em>JS</em> · Deployed on <em>GitHub Pages</em></div>
+    <div class="footer-status">
+      <span style="width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 6px var(--green);display:inline-block;animation:blink 2s infinite;"></span>
+      System secure · All ports closed
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════════════════════
+     JAVASCRIPT
+════════════════════════════════════════════════════════ -->
+<script>
+/* ── Navbar scroll ── */
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 50);
+});
+
+/* ── Mobile menu ── */
+const ham = document.getElementById('hamburger');
+const mob = document.getElementById('mobile-menu');
+ham.addEventListener('click', () => mob.classList.toggle('open'));
+function closeMob() { mob.classList.remove('open'); }
+
+/* ── Reveal on scroll ── */
+const revIO = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('vis'); }
+  });
+}, { threshold: 0.08 });
+document.querySelectorAll('.reveal, .sec-label').forEach(el => revIO.observe(el));
+
+/* ── Skill bars ── */
+const barIO = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.querySelectorAll('.sbar-fill').forEach(b => b.classList.add('go'));
+    }
+  });
+}, { threshold: 0.3 });
+const profCard = document.getElementById('prof-card');
+if (profCard) barIO.observe(profCard);
+
+/* ── Stat counters ── */
+function animateCounter(el) {
+  const target = parseInt(el.dataset.target);
+  const suffix = el.dataset.suffix || '';
+  const duration = 1400;
+  const steps = 45;
+  const inc = target / steps;
+  let cur = 0;
+  const t = setInterval(() => {
+    cur += inc;
+    if (cur >= target) { el.textContent = target + suffix; clearInterval(t); }
+    else { el.textContent = Math.floor(cur) + suffix; }
+  }, duration / steps);
+}
+const statIO = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.querySelectorAll('.stat-val[data-target]').forEach(animateCounter);
+      statIO.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.5 });
+const heroStats = document.querySelector('.hero-stats');
+if (heroStats) statIO.observe(heroStats);
+
+/* ── Typewriter ── */
+const roles = [
+  'Senior Application Security Engineer',
+  'Web & API Penetration Tester',
+  'DevSecOps Architect',
+  'Product Security Lead',
+  'AI / LLM Security Specialist',
+  'Mobile Security Engineer',
+];
+let rIdx = 0, txt = '', del = false;
+const tw = document.getElementById('typewriter');
+function type() {
+  const target = roles[rIdx];
+  if (!del) {
+    if (txt.length < target.length) { txt = target.slice(0, txt.length + 1); setTimeout(type, 55); }
+    else { setTimeout(() => { del = true; type(); }, 2200); }
+  } else {
+    if (txt.length > 0) { txt = txt.slice(0, -1); setTimeout(type, 28); }
+    else { del = false; rIdx = (rIdx + 1) % roles.length; setTimeout(type, 300); }
+  }
+  if (tw) tw.textContent = txt;
+}
+type();
+</script>
+
+</body>
 </html>
