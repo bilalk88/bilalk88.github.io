@@ -268,7 +268,7 @@
 
     /* ─── ABOUT ────────────────────────────────────────── */
     .about-grid { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:start; }
-    .about-photo-wrap { position:relative; }
+    .about-photo-wrap { position: relative; max-width: 340px; }
     .about-photo {
       width:100%; max-width:340px; border-radius:16px;
       border:1px solid var(--bdr);
@@ -439,6 +439,131 @@
       .hero-stats { grid-template-columns:repeat(2,1fr); }
       .about-facts { grid-template-columns:1fr; }
     }
+
+        /* ─── CYBER PHOTO FRAME ────────────────────────────── */
+    .cyber-photo-frame {
+      position: relative;
+      width: 100%; max-width: 340px;
+      border-radius: 4px;
+      overflow: hidden;
+      background: #000;
+    }
+    .about-photo {
+      width: 100%; display: block;
+      aspect-ratio: 3/4; object-fit: cover; object-position: top center;
+      filter: grayscale(35%) contrast(1.12) brightness(0.82) saturate(0.7);
+      mix-blend-mode: luminosity;
+      transition: filter .4s;
+    }
+    .cyber-photo-frame:hover .about-photo {
+      filter: grayscale(10%) contrast(1.1) brightness(0.9) saturate(1.1);
+    }
+    /* Cyan tint overlay */
+    .photo-overlay {
+      position: absolute; inset: 0; pointer-events: none;
+      background: linear-gradient(
+        180deg,
+        rgba(0,212,255,0.08) 0%,
+        rgba(0,0,0,0.15) 50%,
+        rgba(0,212,255,0.12) 100%
+      );
+      mix-blend-mode: screen;
+    }
+    /* Scanline sweep */
+    .scan-sweep {
+      position: absolute; inset: 0; pointer-events: none; z-index: 3;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 3px,
+        rgba(0,212,255,0.025) 3px,
+        rgba(0,212,255,0.025) 4px
+      );
+    }
+    /* Moving scan line */
+    .cyber-photo-frame::after {
+      content: '';
+      position: absolute; left: 0; right: 0; height: 3px; z-index: 4;
+      background: linear-gradient(90deg, transparent, rgba(0,212,255,0.7), transparent);
+      animation: scan-line 4s linear infinite;
+      pointer-events: none;
+    }
+    @keyframes scan-line {
+      0%   { top: -4px; opacity: 0; }
+      5%   { opacity: 1; }
+      95%  { opacity: 1; }
+      100% { top: 100%; opacity: 0; }
+    }
+    /* Corner brackets */
+    .corner {
+      position: absolute; width: 20px; height: 20px; z-index: 5; pointer-events: none;
+    }
+    .corner.tl { top: 10px; left: 10px; border-top: 2px solid var(--cyan); border-left: 2px solid var(--cyan); }
+    .corner.tr { top: 10px; right: 10px; border-top: 2px solid var(--cyan); border-right: 2px solid var(--cyan); }
+    .corner.bl { bottom: 10px; left: 10px; border-bottom: 2px solid var(--cyan); border-left: 2px solid var(--cyan); }
+    .corner.br { bottom: 10px; right: 10px; border-bottom: 2px solid var(--cyan); border-right: 2px solid var(--cyan); }
+    /* HUD top bar */
+    .hud-top {
+      position: absolute; top: 0; left: 0; right: 0; z-index: 6;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 8px 14px;
+      background: linear-gradient(180deg, rgba(0,0,0,0.75) 0%, transparent 100%);
+    }
+    .hud-label {
+      font-family: var(--ff-mono); font-size: .6rem;
+      color: var(--cyan); letter-spacing: .14em;
+    }
+    .hud-dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: var(--green); box-shadow: 0 0 8px var(--green);
+      animation: blink 2s infinite;
+    }
+    /* HUD bottom bar */
+    .hud-bottom {
+      position: absolute; bottom: 0; left: 0; right: 0; z-index: 6;
+      padding: 28px 14px 12px;
+      background: linear-gradient(0deg, rgba(4,8,15,0.92) 0%, transparent 100%);
+      display: flex; flex-direction: column; gap: 3px;
+    }
+    .hud-name {
+      font-family: var(--ff-mono); font-size: .72rem; font-weight: 700;
+      color: var(--bright); letter-spacing: .12em;
+    }
+    .hud-role {
+      font-family: var(--ff-mono); font-size: .6rem;
+      color: var(--cyan); letter-spacing: .1em;
+    }
+    /* Side accent bars */
+    .side-bar {
+      position: absolute; top: 15%; bottom: 15%; width: 2px; z-index: 5; pointer-events: none;
+      background: linear-gradient(180deg, transparent, var(--cyan), transparent);
+      opacity: .5;
+    }
+    .left-bar  { left: 0; }
+    .right-bar { right: 0; }
+    /* Circuit dots pattern */
+    .circuit-dots {
+      position: absolute; inset: 0; z-index: 2; pointer-events: none;
+      background-image:
+        radial-gradient(circle, rgba(0,212,255,.15) 1px, transparent 1px);
+      background-size: 24px 24px;
+      opacity: 0;
+      transition: opacity .4s;
+    }
+    .cyber-photo-frame:hover .circuit-dots { opacity: 1; }
+    /* Floating badges */
+    .photo-badge {
+      position: absolute; z-index: 10;
+      padding: 5px 10px; border-radius: 5px;
+      background: rgba(4,8,15,.85);
+      border: 1px solid rgba(0,212,255,.3);
+      backdrop-filter: blur(8px);
+    }
+    .top-badge { top: -10px; right: -14px; }
+    .bot-badge { bottom: 48px; left: -14px; border-color: rgba(201,168,76,.3); }
+
+
+
   </style>
 </head>
 <body>
@@ -1067,7 +1192,7 @@
 
       <div class="cert-card card reveal d1">
         <div class="cert-top">
-          <img src="img/certs/CARTP.jpg" alt="CRTE" class="cert-logo" />
+          <div class="cert-icon-box" style="background:rgba(255,59,92,.12);border-color:rgba(255,59,92,.3);">🛡️</div>
           <span class="cert-year">2023</span>
         </div>
         <div class="cert-abbr-pill" style="background:rgba(255,59,92,.12);color:var(--red);border:1px solid rgba(255,59,92,.3);">CRTE</div>
@@ -1078,7 +1203,7 @@
 
       <div class="cert-card card reveal d2">
         <div class="cert-top">
-          <img src="img/certs/CARTP.jpg" alt="CARTP" class="cert-logo" />
+          <div class="cert-icon-box" style="background:rgba(88,166,255,.12);border-color:rgba(88,166,255,.3);">☁️</div>
           <span class="cert-year">2021</span>
         </div>
         <div class="cert-abbr-pill" style="background:rgba(88,166,255,.12);color:#58A6FF;border:1px solid rgba(88,166,255,.3);">CARTP</div>
@@ -1089,7 +1214,7 @@
 
       <div class="cert-card card reveal d3">
         <div class="cert-top">
-          <img src="img/certs/AZ-900.png" alt="AZ-900" class="cert-logo" />
+          <div class="cert-icon-box" style="background:rgba(0,120,212,.12);border-color:rgba(0,120,212,.3);">🔷</div>
           <span class="cert-year">2021</span>
         </div>
         <div class="cert-abbr-pill" style="background:rgba(0,120,212,.12);color:#0078D4;border:1px solid rgba(0,120,212,.3);">AZ-900</div>
@@ -1100,7 +1225,7 @@
 
       <div class="cert-card card reveal d1">
         <div class="cert-top">
-          <img src="img/certs/CASENET.png" alt="CASE" class="cert-logo" />
+          <div class="cert-icon-box" style="background:rgba(201,168,76,.12);border-color:rgba(201,168,76,.3);">🛡️</div>
           <span class="cert-year">2019</span>
         </div>
         <div class="cert-abbr-pill" style="background:rgba(201,168,76,.12);color:var(--gold);border:1px solid rgba(201,168,76,.3);">CASE .NET</div>
@@ -1111,7 +1236,7 @@
 
       <div class="cert-card card reveal d2">
         <div class="cert-top">
-          <img src="img/certs/CPSA.png" alt="CPSA" class="cert-logo" />
+          <div class="cert-icon-box" style="background:rgba(0,212,255,.12);border-color:rgba(0,212,255,.3);">🏅</div>
           <span class="cert-year">2019</span>
         </div>
         <div class="cert-abbr-pill" style="background:rgba(0,212,255,.12);color:var(--cyan);border:1px solid rgba(0,212,255,.3);">CPSA</div>
@@ -1122,7 +1247,7 @@
 
       <div class="cert-card card reveal d3">
         <div class="cert-top">
-          <img src="img/certs/ECSA.png" alt="ECSA" class="cert-logo" />
+          <div class="cert-icon-box" style="background:rgba(0,255,157,.12);border-color:rgba(0,255,157,.3);">🎯</div>
           <span class="cert-year">2019</span>
         </div>
         <div class="cert-abbr-pill" style="background:rgba(0,255,157,.12);color:var(--green);border:1px solid rgba(0,255,157,.3);">ECSA</div>
@@ -1133,7 +1258,7 @@
 
       <div class="cert-card card reveal d1">
         <div class="cert-top">
-          <img src="img/certs/ECC-CTIA.png" alt="CTIA" class="cert-logo" />
+          <div class="cert-icon-box" style="background:rgba(188,140,255,.12);border-color:rgba(188,140,255,.3);">🔍</div>
           <span class="cert-year">2018</span>
         </div>
         <div class="cert-abbr-pill" style="background:rgba(188,140,255,.12);color:#BC8CFF;border:1px solid rgba(188,140,255,.3);">CTIA</div>
@@ -1144,7 +1269,7 @@
 
       <div class="cert-card card reveal d2">
         <div class="cert-top">
-          <img src="img/certs/CEH.png" alt="CEH" class="cert-logo" />
+          <div class="cert-icon-box" style="background:rgba(255,59,92,.12);border-color:rgba(255,59,92,.3);">⚔️</div>
           <span class="cert-year">2017</span>
         </div>
         <div class="cert-abbr-pill" style="background:rgba(255,59,92,.12);color:var(--red);border:1px solid rgba(255,59,92,.3);">CEH</div>
@@ -1321,7 +1446,7 @@ const roles = [
   'DevSecOps Engineer',
   'Product Security Lead',
   'AI / LLM Security Specialist',
-  'Mobile Security Engineer',
+  'Mobile Security Test Engineer',
 ];
 let rIdx = 0, txt = '', del = false;
 const tw = document.getElementById('typewriter');
