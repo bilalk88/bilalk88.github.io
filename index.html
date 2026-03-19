@@ -826,6 +826,10 @@
           <li><span class="bullet-arrow" style="color:var(--gold);">▸</span><span>Integrated Snyk into GitLab &amp; Jenkins for SCA, SAST, Container, and IaC scanning with automated developer notifications</span></li>
           <li><span class="bullet-arrow" style="color:var(--gold);">▸</span><span>Assessed AI-integrated apps using OWASP Top 10 for LLMs — identified Prompt Injection, Insecure Output Handling &amp; Sensitive Data Exposure</span></li>
           <li><span class="bullet-arrow" style="color:var(--gold);">▸</span><span>Conducted internal CTF events, phishing simulations &amp; security awareness training across the organization</span></li>
+          <li><span class="bullet-arrow" style="color:var(--gold);">▸</span><span>🔧 Built <strong style="color:var(--bright)">DNSReaper wrapper</strong> for AWS Route 53 — automated subdomain takeover detection across R53 records, reduced dangling DNS exposure by <strong style="color:var(--bright)">50–60%</strong></span></li>
+          <li><span class="bullet-arrow" style="color:var(--gold);">▸</span><span>🔧 Built <strong style="color:var(--bright)">Trufflehog secret scanning wrapper</strong> for SCM repositories — fetched, validated &amp; verified hardcoded secrets, automated stakeholder notifications, achieved <strong style="color:var(--bright)">60–70% reduction</strong> in exposure</span></li>
+          <li><span class="bullet-arrow" style="color:var(--gold);">▸</span><span>🔧 Built <strong style="color:var(--bright)">nightly API scan automation</strong> via Burp Suite Pro + Postman — continuous OWASP API Top 10 coverage across all API endpoints</span></li>
+
         </ul>
         <div class="tags-row"><span class="tag">Web Pentest</span><span class="tag">API Top 10</span><span class="tag">LLM Security</span><span class="tag">VDP</span><span class="tag">Snyk</span><span class="tag">Security Champions</span><span class="tag">PTES</span><span class="tag">CTF</span></div>
       </div>
@@ -927,11 +931,134 @@
 <div class="divider"></div>
 
 <!-- ═══════════════════════════════════════════════════════
+     AUTOMATION
+════════════════════════════════════════════════════════ -->
+<section id="automation" class="sec sec-alt">
+  <div class="wrap">
+    <div class="sec-label reveal"><span>04 / AUTOMATION &amp; TOOLS BUILT</span></div>
+    <h2 class="disp reveal" style="font-size:clamp(2.2rem,4.5vw,3.4rem);color:var(--bright);line-height:1;margin-bottom:14px;">
+      SECURITY <span class="g-cyan">AUTOMATION</span>
+    </h2>
+    <p class="reveal" style="color:var(--mid);font-size:.95rem;margin-bottom:44px;">
+      Custom tooling built to scale security operations and eliminate manual toil
+    </p>
+
+    <div style="display:flex;flex-direction:column;gap:28px;">
+
+      <!-- Tool 1: DNSReaper -->
+      <div class="card reveal" style="padding:28px 26px;border-left:3px solid var(--red);border-radius:0 12px 12px 0;">
+        <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:16px;">
+          <div style="display:flex;align-items:flex-start;gap:14px;">
+            <div style="width:48px;height:48px;border-radius:10px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:1.5rem;background:rgba(255,59,92,.1);border:1px solid rgba(255,59,92,.28);">🌐</div>
+            <div>
+              <div class="mono" style="font-size:.9rem;font-weight:700;color:var(--bright);margin-bottom:4px;">DNSReaper Wrapper — Subdomain Takeover Detection (AWS R53)</div>
+              <div class="mono" style="font-size:.7rem;color:var(--mid);">ConnectWise LLP · 2022–2025</div>
+            </div>
+          </div>
+          <div style="display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border-radius:6px;border:1px solid rgba(255,59,92,.35);background:rgba(255,59,92,.08);">
+            <span>📈</span>
+            <span class="mono" style="font-size:.7rem;font-weight:700;color:var(--red);">50–60% reduction in dangling DNS records</span>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-bottom:16px;">
+          <div style="padding:13px 15px;border-radius:8px;background:rgba(0,0,0,.2);border:1px solid var(--bdr);">
+            <div class="mono" style="font-size:.66rem;font-weight:700;color:var(--red);margin-bottom:7px;">⚠️ PROBLEM</div>
+            <div style="font-size:.84rem;color:var(--mid);line-height:1.6;">AWS Route 53 records pointed to deprovisioned resources — creating subdomain takeover vulnerabilities exploitable to hijack company subdomains.</div>
+          </div>
+          <div style="padding:13px 15px;border-radius:8px;background:rgba(0,0,0,.2);border:1px solid var(--bdr);">
+            <div class="mono" style="font-size:.66rem;font-weight:700;color:var(--red);margin-bottom:7px;">🔧 SOLUTION</div>
+            <div style="font-size:.84rem;color:var(--mid);line-height:1.6;">Built a Python wrapper around DNSReaper to scan all R53 records at scale, validate results, eliminate false positives, and generate structured reports with remediation guidance for CloudOps.</div>
+          </div>
+          <div style="padding:13px 15px;border-radius:8px;background:rgba(0,0,0,.2);border:1px solid var(--bdr);">
+            <div class="mono" style="font-size:.66rem;font-weight:700;color:var(--green);margin-bottom:7px;">✅ OUTCOME</div>
+            <div style="font-size:.84rem;color:var(--mid);line-height:1.6;">Identified all dangling DNS records across the R53 estate. Partnered with CloudOps to remediate, achieving a <strong style="color:var(--bright)">50–60% reduction</strong> in subdomain takeover exposure.</div>
+          </div>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;">
+          <span class="tag tag-red">DNSReaper</span><span class="tag tag-red">AWS Route 53</span><span class="tag tag-red">Python</span><span class="tag tag-red">Boto3</span><span class="tag tag-red">Subdomain Takeover</span><span class="tag tag-red">CloudOps</span>
+        </div>
+      </div>
+
+      <!-- Tool 2: Secret Detection -->
+      <div class="card reveal d1" style="padding:28px 26px;border-left:3px solid var(--gold);border-radius:0 12px 12px 0;">
+        <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:16px;">
+          <div style="display:flex;align-items:flex-start;gap:14px;">
+            <div style="width:48px;height:48px;border-radius:10px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:1.5rem;background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.28);">🔑</div>
+            <div>
+              <div class="mono" style="font-size:.9rem;font-weight:700;color:var(--bright);margin-bottom:4px;">Secret Detection Wrapper — SCM Repository Scanning</div>
+              <div class="mono" style="font-size:.7rem;color:var(--mid);">ConnectWise LLP · 2022–2025</div>
+            </div>
+          </div>
+          <div style="display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border-radius:6px;border:1px solid rgba(201,168,76,.35);background:rgba(201,168,76,.08);">
+            <span>📈</span>
+            <span class="mono" style="font-size:.7rem;font-weight:700;color:var(--gold);">60–70% reduction in hardcoded secrets exposure</span>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-bottom:16px;">
+          <div style="padding:13px 15px;border-radius:8px;background:rgba(0,0,0,.2);border:1px solid var(--bdr);">
+            <div class="mono" style="font-size:.66rem;font-weight:700;color:var(--red);margin-bottom:7px;">⚠️ PROBLEM</div>
+            <div style="font-size:.84rem;color:var(--mid);line-height:1.6;">Hardcoded secrets (API keys, tokens, passwords) embedded in SCM repositories created critical exposure risk across the GitLab estate.</div>
+          </div>
+          <div style="padding:13px 15px;border-radius:8px;background:rgba(0,0,0,.2);border:1px solid var(--bdr);">
+            <div class="mono" style="font-size:.66rem;font-weight:700;color:var(--gold);margin-bottom:7px;">🔧 SOLUTION</div>
+            <div style="font-size:.84rem;color:var(--mid);line-height:1.6;">Built a wrapper that fetched SCM repos, ran detection, validated &amp; verified each finding to eliminate false positives, and automated stakeholder notifications with severity, file paths &amp; remediation steps.</div>
+          </div>
+          <div style="padding:13px 15px;border-radius:8px;background:rgba(0,0,0,.2);border:1px solid var(--bdr);">
+            <div class="mono" style="font-size:.66rem;font-weight:700;color:var(--green);margin-bottom:7px;">✅ OUTCOME</div>
+            <div style="font-size:.84rem;color:var(--mid);line-height:1.6;">Achieved a <strong style="color:var(--bright)">60–70% reduction</strong> in hardcoded secrets exposure. Stakeholders received actionable, prioritised reports with zero noise.</div>
+          </div>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;">
+          <span class="tag tag-gold">TruffleHog</span><span class="tag tag-gold">Secret Scanning</span><span class="tag tag-gold">GitLab API</span><span class="tag tag-gold">Python</span><span class="tag tag-gold">Slack Webhooks</span><span class="tag tag-gold">SCM Security</span>
+        </div>
+      </div>
+
+      <!-- Tool 3: Burp + Postman -->
+      <div class="card reveal d2" style="padding:28px 26px;border-left:3px solid var(--cyan);border-radius:0 12px 12px 0;">
+        <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:16px;">
+          <div style="display:flex;align-items:flex-start;gap:14px;">
+            <div style="width:48px;height:48px;border-radius:10px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:1.5rem;background:rgba(0,212,255,.1);border:1px solid rgba(0,212,255,.28);">🔌</div>
+            <div>
+              <div class="mono" style="font-size:.9rem;font-weight:700;color:var(--bright);margin-bottom:4px;">Nightly API Security Scan — Burp Suite Pro + Postman Automation</div>
+              <div class="mono" style="font-size:.7rem;color:var(--mid);">ConnectWise LLP · 2022–2025</div>
+            </div>
+          </div>
+          <div style="display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border-radius:6px;border:1px solid rgba(0,212,255,.35);background:rgba(0,212,255,.08);">
+            <span>📈</span>
+            <span class="mono" style="font-size:.7rem;font-weight:700;color:var(--cyan);">Continuous OWASP API Top 10 coverage</span>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-bottom:16px;">
+          <div style="padding:13px 15px;border-radius:8px;background:rgba(0,0,0,.2);border:1px solid var(--bdr);">
+            <div class="mono" style="font-size:.66rem;font-weight:700;color:var(--red);margin-bottom:7px;">⚠️ PROBLEM</div>
+            <div style="font-size:.84rem;color:var(--mid);line-height:1.6;">Manual API security testing only happened at release gates — new endpoints were frequently added without security review, leaving vulnerabilities undetected for weeks.</div>
+          </div>
+          <div style="padding:13px 15px;border-radius:8px;background:rgba(0,0,0,.2);border:1px solid var(--bdr);">
+            <div class="mono" style="font-size:.66rem;font-weight:700;color:var(--cyan);margin-bottom:7px;">🔧 SOLUTION</div>
+            <div style="font-size:.84rem;color:var(--mid);line-height:1.6;">Designed a nightly pipeline integrating Burp Suite Pro REST API with Postman collections. Updated collections imported nightly, Burp's active scanner ran across all endpoints, regressions auto-ticketed in Jira.</div>
+          </div>
+          <div style="padding:13px 15px;border-radius:8px;background:rgba(0,0,0,.2);border:1px solid var(--bdr);">
+            <div class="mono" style="font-size:.66rem;font-weight:700;color:var(--green);margin-bottom:7px;">✅ OUTCOME</div>
+            <div style="font-size:.84rem;color:var(--mid);line-height:1.6;">Shifted API testing from periodic to <strong style="color:var(--bright)">continuous</strong>. New API vulnerabilities caught within 24 hours of introduction, preventing them from reaching production.</div>
+          </div>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;">
+          <span class="tag">Burp Suite Pro</span><span class="tag">Postman</span><span class="tag">Newman</span><span class="tag">OWASP API Top 10</span><span class="tag">Jenkins</span><span class="tag">Python</span><span class="tag">Jira API</span><span class="tag">Nightly CI/CD</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════════════════════════════════════════
      CERTIFICATIONS
 ════════════════════════════════════════════════════════ -->
 <section id="certifications" class="sec sec-alt">
   <div class="wrap">
-    <div class="sec-label reveal"><span>04 / CERTIFICATIONS &amp; AWARDS</span></div>
+    <div class="sec-label reveal"><span>05 / CERTIFICATIONS &amp; AWARDS</span></div>
     <h2 class="disp reveal" style="font-size:clamp(2.2rem,4.5vw,3.4rem);color:var(--bright);line-height:1;margin-bottom:48px;">
       CREDENTIALS &amp; <span class="g-gold">RECOGNITION</span>
     </h2>
@@ -1061,7 +1188,7 @@
 ════════════════════════════════════════════════════════ -->
 <section id="contact" class="sec">
   <div class="wrap">
-    <div class="sec-label reveal"><span>05 / CONTACT</span></div>
+    <div class="sec-label reveal"><span>06 / CONTACT</span></div>
 
     <div class="contact-grid">
       <div class="reveal">
@@ -1191,7 +1318,7 @@ if (heroStats) statIO.observe(heroStats);
 const roles = [
   'Senior Application Security Engineer',
   'Web & API Penetration Tester',
-  'DevSecOps Architect',
+  'DevSecOps Engineer',
   'Product Security Lead',
   'AI / LLM Security Specialist',
   'Mobile Security Engineer',
